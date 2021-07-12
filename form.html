@@ -8,8 +8,48 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <a href="/home.html" class="nav">countdowntozero</a>
+    <div>
+      <a href="/home.html" class="nav">countdowntozero.</a>
 
+      <div>
+        <div class="small-shapes"></div>
+        <h1>Add your Message</h1>
+        <p>Add your message to the blockchain. Once 1,000,000 messages are added, they will all be revealed!</p>
+        <div id="form-content">
+          <div>
+            <input type="text" placeholder="Username" id="username">
+            <p>* Add any username, 16 character limit.</p>
+          </div>
+          <div>
+            <input type="text" placeholder="Message" id="message">
+            <p>* Add a message, 64 character limit.</p>
+          </div>
+          <div id="payment-form">
+            <form action="#nothing">
+              <select>
+                <option value="Apple Pay">Apple Pay</option>
+                <option value="Apple Pay">Apple Pay</option>
+                <option value="Apple Pay">Apple Pay</option>
+              </select>
+              <button id="payment-button">Add for €1.50</button>
+            </form>
+            <div>
+              <a href="/home.html">
+                <img src="/Images/info.svg" alt="Why do I need to Pay?">
+                Why do I need to Pay?
+              </a>
+              <div id="secure-payment">
+                <img src="/Images/lock.svg" alt="Secure Payment by Apple">
+                Secure Payment by Apple
+              </div>
+              <a href="/home.html" id="cancel">Cancel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
     <script src="app.js"></script>
   </body>
 </html>
