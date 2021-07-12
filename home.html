@@ -4,26 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>countdowntozero Form Page</title>
+    <title>countdowntozero Homepage</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div>
-      <a href="/home.html" class="nav">countdowntozero.</a>
+    <div class="container">
       <div>
-        <div class="small-shapes">
-          <p>1,000,000 Messsages Left</p>
+        <a href="/home.html" class="nav">countdowntozero.</a>
+        <div>
+          <div class="small-shapes"></div>
+          <p id="message-para">1,000,000 Messsages Left</p>
         </div>
-        <h1>1,000,000 Messages Encapsulated on the Blockchain.</h1>
+        <h1 id="home-h1">1,000,000 Messages Encapsulated on the Blockchain.</h1>
         <div>
           <button id="add-message">Add Message</button>
         </div>
-        <p>Ethereum Contract Address: 0x78382323828328616712172671271</p>
+        <a href="/home.html">
+          <img src="/Images/info.svg" alt="Ethereum Contract"/>
+          Ethereum Contract Address: 0x78382323828328616712172671271
+        </a>
       </div>
+      <div class="shapes"></div>
     </div>
-    <div id="shapes">Random shapes go here</div>
-
-
+    
     <script src="app.js"></script>
   </body>
 </html>
