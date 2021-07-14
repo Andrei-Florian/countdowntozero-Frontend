@@ -8,29 +8,43 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-      <div>
+      <div class="content-container">
         <a href="/home.html" class="nav">countdowntozero.</a>
         <div>
           <div class="small-shapes"></div>
           <p id="messages-remaining">1,000,000 Messsages Left</p>
         </div>
         <h1>1,000,000 Messages Encapsulated on the Blockchain.</h1>
-        <div>
-          <button id="add-message">Add Message</button>
-          <a class="info-button" href="/info.html">More Info</a>
+        <div class="button-container">
+          <button class="add-message">Add Message</button>
+          <button class="button-background"></button>
+          <button class="info-button" href="/Images/info.html">
+            More Info
+          </button>
         </div>
-        <a href="/home.html">
-          <img src="/Images/info.svg" alt="Ethereum Contract"/>
-          Ethereum Contract Address: 0x78382323828328616712172671271
-        </a>
+        <button id="ethereum-contract-address">
+          <img src="/Images/clipboard.svg" alt="Ethereum Contract" />
+          <span id="ethereum-text"
+            >Ethereum Contract Address: 0x78382323828328616712172671271</span
+          >
+        </button>
       </div>
       <div class="shapes"></div>
     </div>
-    
+
     <script src="app.js"></script>
   </body>
 </html>
