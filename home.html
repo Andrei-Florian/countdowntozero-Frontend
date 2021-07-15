@@ -23,17 +23,19 @@
     <div class="container">
       <div class="content-container">
         <a href="/home.html" class="nav">countdowntozero.</a>
-        <div>
+        <div class="messages-remaining-container">
           <div class="small-shapes"></div>
           <p id="messages-remaining">1,000,000 Messsages Left</p>
         </div>
         <h1>1,000,000 Messages Encapsulated on the Blockchain.</h1>
         <div class="big-button-container">
-          <div class="button-container">
-          <button class="add-message">Add Message</button>
-          <button class="button-background"></button>
-          </div>
-          <button class="info-button" href="/Images/info.html">More Info</button>
+          <a class="button-container" href="/form.html">
+            <button class="add-message">Add Message</button>
+            <button class="button-background"></button>
+          </a>
+          <a href="/info.html">
+            <button class="info-button">More Info</button>
+          </a>
         </div>
         <button id="ethereum-contract-address">
           <img src="/Images/clipboard.svg" alt="Ethereum Contract" />
@@ -43,6 +45,7 @@
         </button>
       </div>
       <div class="shapes"></div>
+      <div id="container"></div>
     </div>
 
     <script src="app.js"></script>
