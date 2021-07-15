@@ -89,6 +89,7 @@ body {
   transform: rotate(270deg);
 }
 
+/* Text Styles */
 .nav {
   font-family: poppins, sans-serif;
   font-weight: bold;
@@ -107,6 +108,22 @@ h1 {
   font-size: 4rem;
   width: 73.4%;
   line-height: 92px;
+}
+
+h2 {
+  font-family: poppins, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.body-text {
+  font-family: poppins, sans-serif;
+  font-size: 1.5rem;
+  text-align: left;
+  top: 827px;
+  left: 140px;
+  width: 677px;
+  height: 473px;
 }
 
 .small-shapes {
@@ -131,6 +148,7 @@ h1 {
   margin-left: 36px;
 }
 
+/* Ethereum contract address copy to clipboard button */
 #ethereum-contract-address {
   font-family: poppins, sans-serif;
   font-weight: regular;
@@ -150,25 +168,48 @@ h1 {
   margin-left: 16px;
 }
 
-/* .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+#copy-icon {
+  align-self: center;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
-  background-color: black;
+  width: 140px;
+  background-color: #555;
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
-
-  /* Position the tooltip */
-/* position: absolute;
+  padding: 5px;
+  position: absolute;
   z-index: 1;
-} */
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+#ethereum-input {
+  display: none;
+}
+
+/* Info Button */
 .info-button {
   font-family: poppins, sans-serif;
   font-weight: bold;
@@ -310,4 +351,27 @@ h1 {
   .add-message:hover {
     transform: translateX(11px) translateY(8px);
   }
+}
+
+/* Info Page Styles */
+
+#info-container {
+  align-content: start;
+}
+
+#info-nav {
+  position: static;
+  margin-top: 4%;
+  margin-bottom: 69px;
+}
+
+.abstract {
+  top: 345px;
+  left: 140px;
+  width: 684px;
+  height: 456px;
+}
+
+.scrollable {
+  overflow-y: auto;
 }

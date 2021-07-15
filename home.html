@@ -38,18 +38,17 @@
           </a>
         </div>
 
-        <button id="ethereum-contract-address">
-          <div class="tooltiptext">
-            <span >Tooltip text</span>
-           </div>
-            <img src="/Images/clipboard.svg" alt="Ethereum Contract" />
-            <span 
-              onclick="copy(this)"
-              value="0x78382323828328616712172671271"
-              id="ethereum-text"
-              >Ethereum Contract Address: 0x78382323828328616712172671271</span
-            >
-        </button>
+        <div class="tooltip">
+            <button id="ethereum-contract-address">
+              <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+              <input id="ethereum-input" type="text" value="0x78382323828328616712172671271">
+            <img src="/Images/clipboard.svg" alt="Ethereum Contract" id="copy-icon"/>
+            <span id="ethereum-text">
+            Ethereum Contract Address: 0x78382323828328616712172671271
+            </span>
+          </button>
+        </div>
+          
       </div>
       <div class="shapes">
         <div class="shapes-1"></div>
@@ -57,8 +56,6 @@
         <div class="shapes-3"></div>
         <div class="shapes-4"></div>
       </div>
-      <div id="container"></div>
-    </div>
 
     <script src="app.js"></script>
   </body>
