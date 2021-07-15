@@ -37,14 +37,26 @@
             <button class="info-button">More Info</button>
           </a>
         </div>
+
         <button id="ethereum-contract-address">
-          <img src="/Images/clipboard.svg" alt="Ethereum Contract" />
-          <span id="ethereum-text"
-            >Ethereum Contract Address: 0x78382323828328616712172671271</span
-          >
+          <div class="tooltiptext">
+            <span >Tooltip text</span>
+           </div>
+            <img src="/Images/clipboard.svg" alt="Ethereum Contract" />
+            <span 
+              onclick="copy(this)"
+              value="0x78382323828328616712172671271"
+              id="ethereum-text"
+              >Ethereum Contract Address: 0x78382323828328616712172671271</span
+            >
         </button>
       </div>
-      <div class="shapes"></div>
+      <div class="shapes">
+        <div class="shapes-1"></div>
+        <div class="shapes-2"></div>
+        <div class="shapes-3"></div>
+        <div class="shapes-4"></div>
+      </div>
       <div id="container"></div>
     </div>
 
