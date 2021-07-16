@@ -30,8 +30,8 @@ body {
 .small-shapes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  width: 181px;
-  height: 36px;
+  width: 16.6667vh;
+  height: 3.3333vh;
 }
 
 .shapes-1 {
@@ -136,7 +136,7 @@ h2 {
 .messages-remaining-container {
   display: flex;
   align-items: center;
-  height: 30px;
+  height: 20px;
 }
 
 #messages-remaining {
@@ -362,6 +362,9 @@ h2 {
 }
 
 /* Info Page Styles */
+.scrollable {
+  overflow-y: auto;
+}
 
 #info-container {
   align-content: start;
@@ -380,6 +383,14 @@ h2 {
   height: 456px;
 }
 
-.scrollable {
-  overflow-y: auto;
+#add-message-info {
+  position: fixed;
+  top: 83%;
+  left: 11.94%;
+}
+
+#button-background-info {
+  position: fixed;
+  top: 83%;
+  left: 11.94%;
 }
