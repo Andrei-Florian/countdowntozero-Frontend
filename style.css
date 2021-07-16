@@ -27,6 +27,13 @@ body {
   right: 0;
 }
 
+.small-shapes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 181px;
+  height: 36px;
+}
+
 .shapes-1 {
   display: grid;
   grid-template-rows: repeat(5 1fr);
@@ -126,13 +133,6 @@ h2 {
   height: 473px;
 }
 
-.small-shapes {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  width: 181px;
-  height: 36px;
-}
-
 .messages-remaining-container {
   display: flex;
   align-items: center;
@@ -149,7 +149,7 @@ h2 {
 }
 
 /* Ethereum contract address copy to clipboard button */
-#ethereum-contract-address {
+#eth-button {
   font-family: poppins, sans-serif;
   font-weight: regular;
   font-size: 1rem;
@@ -170,6 +170,18 @@ h2 {
 
 #copy-icon {
   align-self: center;
+}
+
+#eth-input {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  left: -20%;
+}
+
+.tooltip {
+  display: inline-block;
 }
 
 .tooltip .tooltiptext {
@@ -203,10 +215,6 @@ h2 {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
-}
-
-#ethereum-input {
-  display: none;
 }
 
 /* Info Button */
@@ -349,7 +357,7 @@ h2 {
   }
 
   .add-message:hover {
-    transform: translateX(11px) translateY(8px);
+    transform: translateX(9px) translateY(8px);
   }
 }
 

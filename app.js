@@ -58,31 +58,22 @@ function addSmallShapes() {
 addShapes();
 addSmallShapes();
 
-// function copy(that) {
-//   const inp = document.createElement("input");
-//   document.body.appendChild(inp);
-//   inp.value = that.textContent;
-//   inp.select();
-//   document.execCommand("copy", false);
-//   inp.remove();
-// }
-
-const ethereumButton = document.querySelector("#ethereum-contract-address");
-
-let copyText = document.querySelector("#ethereum-input");
-  function textCopier() {
+const ethButton = document.querySelector("#eth-button");
+function myFunction() {
+    var copyText = document.getElementById("eth-input");
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     document.execCommand("copy");
     
-    let tooltip = document.querySelector("#myTooltip");
+    var tooltip = document.getElementById("myTooltip");
     tooltip.innerHTML = "Copied!";
   }
   
-  function tooltipFunc() {
-    let tooltip = document.querySelector("#myTooltip");
+  function outFunc() {
+    var tooltip = document.getElementById("myTooltip");
     tooltip.innerHTML = "Copy to clipboard";
   }
 
-  copyText.addEventListener("click", textCopier)
-  copyText.addEventListener("onmouseout", tooltipFunc)
+
+  ethButton.addEventListener("click", myFunction);
+  ethButton.addEventListener("mouseout", outFunc);
