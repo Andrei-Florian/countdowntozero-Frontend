@@ -27,20 +27,15 @@ body {
   right: 0;
 }
 
-.shapes-3-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 80vh;
-  height: 100vh;
-  position: fixed;
-  right: 0;
+.nav-div {
+  height: 160px;
 }
 
 .small-shapes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  width: 16.6667vh;
-  height: 3.3333vh;
+  width: 180px;
+  height: 36px;
 }
 
 .shapes-1 {
@@ -60,21 +55,6 @@ body {
 
 .shapes-4 {
   display: grid;
-  grid-template-rows: repeat(5 1fr);
-}
-
-.shapes-small-2 {
-  display: none;
-  grid-template-rows: repeat(5 1fr);
-}
-
-.shapes-small-3 {
-  display: none;
-  grid-template-rows: repeat(5 1fr);
-}
-
-.shapes-small-4 {
-  display: none;
   grid-template-rows: repeat(5 1fr);
 }
 
@@ -129,7 +109,7 @@ body {
   text-decoration: none;
   position: absolute;
   top: 4.25%;
-  left: 7.292%;
+  left: 7.29%;
 }
 
 h1 {
@@ -313,15 +293,33 @@ h2 {
     line-height: 85px;
   }
 
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .body-text {
+    font-size: 1.3125rem;
+  }
+
+  .nav {
+    font-size: 1.75rem;
+  }
+
+  .messages-remaining {
+    font-size: 1.75rem;
+  }
+
   .info-button {
     width: 250px;
     height: 97px;
     margin-left: 15px;
+    font-size: 1.3125rem;
   }
 
   .add-message {
     height: 97px;
     width: 250px;
+    font-size: 1.3125rem;
   }
 
   .button-background {
@@ -344,19 +342,8 @@ h2 {
     display: none;
   }
 
-  .shapes-small-2 {
-    display: grid;
-    grid-template-rows: repeat(5 1fr);
-  }
-
-  .shapes-small-3 {
-    display: grid;
-    grid-template-rows: repeat(5 1fr);
-  }
-
-  .shapes-small-4 {
-    display: grid;
-    grid-template-rows: repeat(5 1fr);
+  .nav {
+    font-size: 1.5rem;
   }
 
   h1 {
@@ -364,11 +351,19 @@ h2 {
     line-height: 78px;
   }
 
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .body-text {
+    font-size: 1.125rem;
+  }
+
   .info-button {
     width: 220px;
     height: 86px;
-    margin-left: 0px;
-    font-size: 1.3rem;
+    margin-left: 20px;
+    font-size: 1.125rem;
   }
 
   .button-container {
@@ -379,7 +374,7 @@ h2 {
   .add-message {
     width: 220px;
     height: 86px;
-    font-size: 1.3rem;
+    font-size: 1.125rem;
     grid-column-start: 1;
     grid-column-end: 8;
     grid-row-start: 1;
@@ -395,8 +390,22 @@ h2 {
     grid-row-end: 16;
   }
 
+  .messages-remaining {
+    margin-left: 30px;
+    font-size: 1.5rem;
+  }
+
   .add-message:hover {
     transform: translateX(9px) translateY(8px);
+  }
+
+  .small-shapes {
+    width: 150px;
+    height: 30px;
+  }
+
+  .big-button-container {
+    margin-top: 0px;
   }
 }
 
@@ -407,12 +416,6 @@ h2 {
 
 #info-container {
   align-content: start;
-}
-
-#info-nav {
-  position: static;
-  margin-top: 4%;
-  margin-bottom: 69px;
 }
 
 .abstract {
