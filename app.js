@@ -1,24 +1,8 @@
-// function randomColor () {
-//     let colorValue = Math.floor(Math.random()*5);
-//     color = `color${colorValue}`;
-// }
-
 function randomRotation() {
   let rotationValue = Math.floor(Math.random() * 4);
   rotation = `rotation${rotationValue}`;
 }
 
-
-// function addElement () {
-    //     const shapeContainer = document.querySelector('.shapes-1')
-    //     const newShape = document.createElement('div');
-    
-    //     randomColor();
-    // randomRotation();
-    
-    //     newShape.classList.add('base-shape', color, rotation);
-    //     shapeContainer.appendChild(newShape);
-    // }
     const colorOrder1 = ["color3", "color2", "color0", "color1", "color4"];
     const colorOrder2 = ["color1", "color4", "color3", "color2", "color0"];
     const colorOrder3 = ["color2", "color0", "color1", "color4", "color3"];
@@ -58,22 +42,26 @@ function addSmallShapes() {
 addShapes();
 addSmallShapes();
 
+const tooltip = document.querySelector("#myTooltip");
 const ethButton = document.querySelector("#eth-button");
-function myFunction() {
-    var copyText = document.getElementById("eth-input");
+
+function textCopier() {
+  let ethInput = document.createElement("input");
+  ethInput.classList.add("eth-input");
+  ethInput.value = "0x78382323828328616712172671271";
+  ethButton.appendChild(ethInput); 
+  let copyText = document.querySelector(".eth-input");
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     document.execCommand("copy");
-    
-    var tooltip = document.getElementById("myTooltip");
+    ethButton.removeChild(ethInput);
+
     tooltip.innerHTML = "Copied!";
   }
   
-  function outFunc() {
-    var tooltip = document.getElementById("myTooltip");
+  function tooltipFunc() {
     tooltip.innerHTML = "Copy to clipboard";
   }
 
-
-  ethButton.addEventListener("click", myFunction);
-  ethButton.addEventListener("mouseout", outFunc);
+ethButton.addEventListener("click", textCopier);
+ethButton.addEventListener("mouseout", tooltipFunc);

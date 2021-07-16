@@ -172,7 +172,7 @@ h2 {
   align-self: center;
 }
 
-#eth-input {
+.eth-input {
   opacity: 0;
   width: 1px;
   height: 1px;
