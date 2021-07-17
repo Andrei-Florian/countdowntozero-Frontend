@@ -100,6 +100,10 @@ body {
   transform: rotate(270deg);
 }
 
+#mobile-shape {
+  display: none;
+}
+
 /* Text Styles */
 .nav {
   font-family: poppins, sans-serif;
@@ -239,6 +243,15 @@ h2 {
   text-decoration: none;
   margin-left: 59px;
   cursor: pointer;
+}
+
+#mobile-info-button {
+  font-family: poppins, sans-serif;
+  font-weight: bold;
+
+  font-size: 1.5rem;
+  color: #022539;
+  display: none;
 }
 
 /* Add message button styling and animation */
@@ -738,8 +751,8 @@ h2 {
 
   .content-container {
     margin: 7.292%;
-    align-content: initial;
-    align-items: center;
+    /* align-content: initial; */
+    /* align-items: center; */
     justify-items: center;
   }
 
@@ -749,7 +762,6 @@ h2 {
 
   #messages-remaining {
     margin-left: 4.6728vw;
-    /* font-size: 1.1875rem; */
     font-size: 4.4392vw;
     height: 6.5vw;
   }
@@ -761,34 +773,62 @@ h2 {
 
   h1 {
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 45px;
+    margin-top: 34px;
+    margin-bottom: 52px;
   }
 
   .button-container {
-    width: 288px;
-    display: grid;
-    grid-template-columns: repeat(27, 1fr);
-    text-decoration: none;
+    width: 100%;
+  }
+
+  .button-container {
+    width: 250px;
   }
 
   .add-message {
     font-size: 1.5rem;
-    width: 288px;
-    height: 120px;
+    width: 250px;
+    height: 104.1666px;
+    margin-bottom: 43px;
   }
 
   .add-message:hover {
-    transform: translateX(6px) translateY(5px);
+    transform: translateX(12px) translateY(11px);
+  }
+
+  .info-button {
+    display: none;
+  }
+
+  #mobile-info-button {
+    display: initial;
+    margin-bottom: 120px;
   }
 
   .button-background {
-    width: 288px;
-    height: 120px;
+    width: 250px;
+    height: 104.1666px;
+  }
+
+  #mobile-shape {
+    display: initial;
+    position: absolute;
+    width: 190px;
+    top: 70%;
+    right: 0;
   }
 
   #eth-button {
+    font-size: 1rem;
+    /* position: static;
+    margin-bottom: ; */
     top: 88%;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 

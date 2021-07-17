@@ -37,7 +37,7 @@ function addSmallShapes() {
       }
 };
 
-addShapes(4);
+addShapes();
 addSmallShapes();
 
 const tooltip = document.querySelector("#myTooltip");
