@@ -164,8 +164,12 @@ h2 {
   display: flex;
   cursor: pointer;
   position: absolute;
-  top: 93%;
+  top: 92%;
   left: 7.292%;
+}
+
+.eth-address-mobile {
+  display: none;
 }
 
 #ethereum-text {
@@ -305,7 +309,7 @@ h2 {
     font-size: 1.75rem;
   }
 
-  .messages-remaining {
+  #messages-remaining {
     font-size: 1.75rem;
   }
 
@@ -390,9 +394,10 @@ h2 {
     grid-row-end: 16;
   }
 
-  .messages-remaining {
+  #messages-remaining {
     margin-left: 30px;
     font-size: 1.5rem;
+    height: 37px;
   }
 
   .add-message:hover {
@@ -406,6 +411,384 @@ h2 {
 
   .big-button-container {
     margin-top: 0px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .nav {
+    font-size: 1.25rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 68px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .body-text {
+    font-size: 0.9375rem;
+  }
+
+  .info-button {
+    width: 200px;
+    height: 78px;
+    margin-left: 0px;
+    font-size: 0.9375rem;
+  }
+
+  .button-container {
+    width: 240px;
+  }
+
+  .add-message {
+    width: 200px;
+    height: 78px;
+    font-size: 0.9375rem;
+  }
+
+  .button-background {
+    width: 200px;
+    height: 78px;
+  }
+
+  #messages-remaining {
+    margin-left: 25px;
+    font-size: 1.25rem;
+    height: 30px;
+  }
+
+  .add-message:hover {
+    transform: translateX(9px) translateY(8px);
+  }
+
+  .small-shapes {
+    width: 125px;
+    height: 25px;
+  }
+
+  .big-button-container {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 1169px) {
+  h1 {
+    font-size: 2.4rem;
+    line-height: 65px;
+  }
+
+  .button-container {
+    width: 230px;
+  }
+
+  .add-message {
+    width: 190px;
+    height: 74.1px;
+  }
+
+  .button-background {
+    width: 190px;
+    height: 74.1px;
+  }
+
+  .info-button {
+    width: 190px;
+    height: 74.1px;
+  }
+
+  #ethereum-text {
+    margin-left: 12px;
+  }
+
+  #eth-button {
+    font-size: 0.85rem;
+  }
+
+  .eth-address-mobile {
+    display: inline;
+  }
+
+  .eth-address-hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 1122px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 50px;
+  }
+
+  #messages-remaining {
+    margin-left: 25px;
+    font-size: 1rem;
+    height: 25px;
+  }
+
+  .small-shapes {
+    width: 115px;
+    height: 23px;
+  }
+
+  .button-container {
+    width: 210px;
+  }
+
+  .add-message {
+    width: 175px;
+    height: 68.25px;
+  }
+
+  .add-message:hover {
+    transform: translateX(8px) translateY(7px);
+  }
+
+  .button-background {
+    width: 175px;
+    height: 68.25px;
+  }
+
+  .info-button {
+    width: 175px;
+    height: 68.25px;
+  }
+
+  #eth-button {
+    font-size: 0.7083rem;
+  }
+
+  #copy-icon {
+    height: 15px;
+  }
+
+  .eth-address-mobile {
+    display: inline;
+  }
+
+  .eth-address-hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 936px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .shapes {
+    width: 40vh;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .shapes-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 840px) {
+  h1 {
+    font-size: 1.5rem;
+    line-height: 45px;
+  }
+
+  .nav {
+    font-size: 0.95rem;
+  }
+
+  #messages-remaining {
+    margin-left: 18px;
+    font-size: 0.95rem;
+    height: 23px;
+  }
+
+  .small-shapes {
+    width: 90px;
+    height: 18px;
+  }
+
+  .button-container {
+    width: 190px;
+  }
+
+  .add-message {
+    width: 155px;
+    height: 60.45px;
+    font-size: 0.8rem;
+    border-width: 3px;
+  }
+
+  .add-message:hover {
+    transform: translateX(7px) translateY(6px);
+  }
+
+  .button-background {
+    width: 155px;
+    height: 60.45px;
+  }
+
+  .info-button {
+    width: 155px;
+    height: 60.45px;
+    font-size: 0.8rem;
+    border-width: 3px;
+  }
+}
+
+@media (max-width: 700px) {
+  .shapes {
+    width: 20vh;
+    grid-template-columns: 1fr;
+  }
+
+  .shapes-3 {
+    display: none;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    line-height: 35px;
+  }
+
+  .button-container {
+    width: 160px;
+  }
+
+  .add-message {
+    width: 130px;
+    height: 50.7px;
+    font-size: 0.8rem;
+    border-width: 2px;
+  }
+
+  .add-message:hover {
+    transform: translateX(6px) translateY(5px);
+  }
+
+  .button-background {
+    width: 130px;
+    height: 50.7px;
+  }
+
+  .info-button {
+    width: 130px;
+    height: 50.7px;
+    font-size: 0.8rem;
+    border-width: 2px;
+  }
+}
+@media (max-width: 638px) {
+  h1 {
+    font-size: 1.1rem;
+    line-height: 29px;
+  }
+
+  #messages-remaining {
+    margin-left: 15px;
+    font-size: 0.8rem;
+    height: 18px;
+  }
+
+  .small-shapes {
+    width: 75px;
+    height: 15px;
+  }
+  .button-container {
+    width: 140px;
+  }
+
+  .add-message {
+    width: 115px;
+    height: 44.85px;
+    font-size: 0.65rem;
+    border-width: 2px;
+  }
+
+  .add-message:hover {
+    transform: translateX(6px) translateY(5px);
+  }
+
+  .button-background {
+    width: 115px;
+    height: 44.85px;
+  }
+
+  .info-button {
+    width: 115px;
+    height: 44.85px;
+    font-size: 0.65rem;
+    border-width: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shapes {
+    display: none;
+  }
+
+  .nav {
+    font-size: 1.25rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .content-container {
+    margin: 7.292%;
+    align-content: initial;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .messages-remaining-container {
+    width: 100%;
+  }
+
+  #messages-remaining {
+    margin-left: 4.6728vw;
+    /* font-size: 1.1875rem; */
+    font-size: 4.4392vw;
+    height: 6.5vw;
+  }
+
+  .small-shapes {
+    width: 23.364vw;
+    height: 4.6728vw;
+  }
+
+  h1 {
+    width: 100%;
+    font-size: 2rem;
+    line-height: 45px;
+  }
+
+  .button-container {
+    width: 288px;
+    display: grid;
+    grid-template-columns: repeat(27, 1fr);
+    text-decoration: none;
+  }
+
+  .add-message {
+    font-size: 1.5rem;
+    width: 288px;
+    height: 120px;
+  }
+
+  .add-message:hover {
+    transform: translateX(6px) translateY(5px);
+  }
+
+  .button-background {
+    width: 288px;
+    height: 120px;
+  }
+
+  #eth-button {
+    top: 88%;
   }
 }
 
