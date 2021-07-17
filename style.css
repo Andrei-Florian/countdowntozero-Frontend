@@ -780,22 +780,18 @@ h2 {
   }
 
   .button-container {
-    width: 100%;
-  }
-
-  .button-container {
-    width: 250px;
+    width: 288px;
   }
 
   .add-message {
     font-size: 1.5rem;
-    width: 250px;
-    height: 104.1666px;
+    width: 277px;
+    height: 108px;
     margin-bottom: 43px;
   }
 
   .add-message:hover {
-    transform: translateX(12px) translateY(11px);
+    transform: translateX(11px) translateY(15px);
   }
 
   .info-button {
@@ -808,14 +804,14 @@ h2 {
   }
 
   .button-background {
-    width: 250px;
-    height: 104.1666px;
+    width: 277px;
+    height: 108px;
   }
 
   #mobile-shape {
     display: initial;
     position: absolute;
-    width: 190px;
+    width: 170px;
     top: 70%;
     right: 0;
   }
@@ -829,6 +825,46 @@ h2 {
     right: 0;
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.5rem;
+    line-height: 35px;
+    margin-bottom: 40px;
+  }
+
+  .button-container {
+    width: 230px;
+  }
+
+  .add-message {
+    font-size: 1.2rem;
+    width: 220px;
+    height: 85.7761px;
+    margin-bottom: 43px;
+  }
+
+  .add-message:hover {
+    transform: translateX(9px) translateY(13px);
+  }
+
+  #mobile-info-button {
+    font-size: 1.2rem;
+  }
+
+  .button-background {
+    width: 220px;
+    height: 85.7761px;
+  }
+
+  #mobile-shape {
+    width: 150px;
+  }
+
+  #eth-button {
+    font-size: 0.8rem;
   }
 }
 
