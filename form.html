@@ -9,15 +9,87 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-      <div>
+      <div class="content-container">
         <a href="/home.html" class="nav">countdowntozero.</a>
+        <form id="regForm" action="/action_page.php">
+          <div id="step-container">
+            <span id="circle"></span>
+            <span class="step" id="step-1">1</span>
+            <div class="line"></div>
+            <span class="step" id="step-2">2</span>
+            <div class="line"></div>
+            <span class="step" id="step-3">3</span>
+          </div>
+          <div class="tab">
+            <h1>Write Message</h1>
+            <p class="body-text">Add your message to the blockchain. Once 1,000,000 messages are added, they will all be revealed!</p>
+            <input placeholder="Username" class="text-field form-element" id="username" name="username">
+            <p class="disclaimer">* Add any username, 16 character limit.</p>
+            <input placeholder="Message" class="text-field form-element" id="message" name="message">
+            <p class="disclaimer">* Add a message, 64 character limit.</p>
+          </div>
+          <div class="tab">
+            <h1>Select Charity</h1>
+            <p class="body-text">Add your message to the blockchain. Once 1,000,000 messages are added, they will all be</p>
+              <input type="radio" name="charity" id="FEBA" class="form-element">
+              <label class="charity-labels" for="FEBA">European Food Banks Federation
+                <p class="charity-text">Each transaction comes with a donation of 10 cents to charity.transaction comes with a donation of 10 cents to</p>
+              </label>
+              <input type="radio" name="charity" id="ACS" class="form-element">
+              <label class="charity-labels" for="ACS">American Cancer Society
+              <p class="charity-text">Each transaction comes with a donation of 10 cents to charity.transaction comes with a donation of 10 cents to</p>
+              </label>
+              <input type="radio" name="charity" id="DS" class="form-element">
+              <label class="charity-labels" for="DS">Daffodil Society
+                <p class="charity-text">Each transaction comes with a donation of 10 cents to charity.transaction comes with a donation of 10 cents to</p>
+              </label>
+          </div>
+          <div class="tab">
+            <h1>Payment</h1>
+            <p class="body-text">Add your message to the blockchain. Once 1,000,000 messages are added, they will all be revealed!</p>
+            <select name="payment-method" id="payment-method" class="form-element">
+              <option value="default">Choose a Payment Method</option>
+              <option value="Apple Pay">Apple Pay</option>
+              <option value="Google Pay">Google Pay</option>
+              <option value="Paypal">Paypal</option>
+              <option value="Coinbase Commerce">Coinbase Commerce</option>
+              <option value="Bitpay">Bitpay</option>
+              <option value="Alipay">Alipay</option>
+            </select>
+            <div>
+              <a href="/info.html">Why do I need to Pay?</a>
+              <p><img src="/Images/lock.svg" alt="Secure Payment">Secure Payment By Apple</p>
+            </div>
+          </div>
+          <div>
+            <a href="/home.html">
+            <button type="button" id="cancel">Cancel</button>
+            </a>
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+          </div>
+          <!-- Circles which indicates the steps of the form: -->
+        </form>
       </div>
-      <div class="shapes"></div>
+
+      <div class="shapes">
+          <div class="shapes-1"></div>
+          <div class="shapes-2"></div>
+          <div class="shapes-3"></div>
+          <div class="shapes-4"></div>
+      </div>
+
     </div>
     
-    <script src="app.js"></script>
+    <script src="form.js"></script>
   </body>
 </html>

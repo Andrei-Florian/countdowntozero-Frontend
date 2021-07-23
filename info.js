@@ -1,3 +1,4 @@
+// Shape Generation
 const colorOrder1 = ["color3", "color2", "color0", "color1", "color4"];
 const colorOrder2 = ["color1", "color4", "color3", "color2", "color0"];
 const colorOrder3 = ["color2", "color0", "color1", "color4", "color3"];

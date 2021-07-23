@@ -1,7 +1,10 @@
+/* Basic Styles */
+html,
 body {
   margin: 0;
   padding: 0;
   width: 100vw;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -104,6 +107,10 @@ body {
   display: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Text Styles */
 .nav {
   font-family: poppins, sans-serif;
@@ -121,7 +128,7 @@ h1 {
   color: #022539;
   font-weight: bold;
   font-size: 4rem;
-  width: 73.4%;
+  /* width: 73.4%; */
   line-height: 92px;
 }
 
@@ -134,11 +141,7 @@ h2 {
 .body-text {
   font-family: poppins, sans-serif;
   font-size: 1.5rem;
-  text-align: left;
-  top: 827px;
-  left: 140px;
-  width: 677px;
-  height: 473px;
+  width: 100%;
 }
 
 .messages-remaining-container {
@@ -161,15 +164,15 @@ h2 {
   font-family: poppins, sans-serif;
   font-weight: regular;
   font-size: 1rem;
-  text-decoration: none;
   color: #000000;
   background-color: rgba(0, 0, 0, 0);
   border: none;
   display: flex;
   cursor: pointer;
   position: absolute;
+  padding: 0;
   top: 92%;
-  left: 7.292%;
+  left: 7.29%;
 }
 
 .eth-address-mobile {
@@ -255,7 +258,6 @@ h2 {
 }
 
 /* Add message button styling and animation */
-
 .button-container {
   width: 288px;
   display: grid;
@@ -302,6 +304,186 @@ h2 {
 .big-button-container {
   display: flex;
   margin-top: 10px;
+}
+
+/* Info Page Styles */
+.scrollable {
+  overflow-y: auto;
+}
+
+#info-container {
+  align-content: start;
+}
+
+.abstract {
+  top: 345px;
+  left: 140px;
+  width: 684px;
+  height: 456px;
+}
+
+#add-message-info {
+  position: fixed;
+  top: 83.33%;
+  left: 6.9%;
+}
+
+#button-background-info {
+  position: fixed;
+  top: 83.33%;
+  left: 6.9%;
+}
+
+#add-message-info:hover {
+  transform: translateX(0px) translateY(0px);
+}
+
+/* Form Page Styles */
+* {
+  box-sizing: border-box;
+}
+
+#regForm {
+  font-family: poppins, sans-serif;
+  width: 70%;
+}
+
+.text-field {
+  width: 100%;
+}
+
+input {
+  padding: 10px;
+  font-size: 17px;
+  font-family: poppins, sans-serif;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+  height: 58.1481vh;
+}
+
+.charity-text {
+  display: none;
+  align-self: flex-end;
+}
+
+button {
+  background-color: #04aa6d;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: poppins, sans-serif;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+#cancel {
+  display: none;
+}
+
+.charity-select {
+  display: grid;
+  margin: 10% 0;
+  height: 15.8839%;
+}
+
+input[type="radio"] {
+  width: 0px;
+  height: 0px;
+  margin: 0;
+}
+
+.charity-labels {
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+  border: 3px solid #385663;
+  height: 115px;
+  padding: 10px 20px 10px 20px;
+  transition: 0.3s height;
+}
+
+input[type="radio"]:checked + .charity-labels {
+  border-color: lawngreen;
+  height: 192px;
+  grid-template-rows: 95px 1fr;
+  /* align-items: start; */
+}
+
+input[type="radio"]:checked + .charity-labels .charity-text {
+  display: block;
+}
+
+/* Make circles that indicate the steps of the form: */
+#step-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+  justify-content: space-around;
+  width: 396px;
+}
+
+.step {
+  height: 41px;
+  width: 41px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.line {
+  width: 99.79px;
+  height: 2px;
+  background-color: #022539;
+}
+
+#step-1 {
+  background-color: #385663;
+}
+
+#step-2 {
+  background-color: #3eb2a2;
+}
+
+#step-3 {
+  background-color: #fdd272;
+}
+
+#circle {
+  height: 71px;
+  width: 71px;
+  position: absolute;
+  border: 2px solid #022539;
+  border-radius: 50%;
+  justify-self: start;
+}
+
+.step.active {
+  opacity: 1;
+  /* border: 2px solid #022539; */
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04aa6d;
 }
 
 @media (max-width: 1750px) {
@@ -443,6 +625,7 @@ h2 {
 
   .body-text {
     font-size: 0.9375rem;
+    height: 200px;
   }
 
   .info-button {
@@ -651,15 +834,6 @@ h2 {
 }
 
 @media (max-width: 700px) {
-  .shapes {
-    width: 20vh;
-    grid-template-columns: 1fr;
-  }
-
-  .shapes-3 {
-    display: none;
-  }
-
   h1 {
     font-size: 1.3rem;
     line-height: 35px;
@@ -672,26 +846,27 @@ h2 {
   .add-message {
     width: 130px;
     height: 50.7px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     border-width: 2px;
+  }
+
+  .button-background {
+    height: 50.7px;
+    width: 130px;
   }
 
   .add-message:hover {
     transform: translateX(6px) translateY(5px);
   }
 
-  .button-background {
-    width: 130px;
-    height: 50.7px;
-  }
-
   .info-button {
     width: 130px;
     height: 50.7px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     border-width: 2px;
   }
 }
+
 @media (max-width: 638px) {
   h1 {
     font-size: 1.1rem;
@@ -715,8 +890,12 @@ h2 {
   .add-message {
     width: 115px;
     height: 44.85px;
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     border-width: 2px;
+  }
+
+  #add-message-info {
+    right: 10%;
   }
 
   .add-message:hover {
@@ -731,7 +910,7 @@ h2 {
   .info-button {
     width: 115px;
     height: 44.85px;
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     border-width: 2px;
   }
 }
@@ -751,8 +930,7 @@ h2 {
 
   .content-container {
     margin: 7.292%;
-    /* align-content: initial; */
-    /* align-items: center; */
+
     justify-items: center;
   }
 
@@ -818,9 +996,7 @@ h2 {
 
   #eth-button {
     font-size: 1rem;
-    /* position: static;
-    margin-bottom: ; */
-    top: 88%;
+    top: 86%;
     left: 0;
     right: 0;
     margin-right: auto;
@@ -828,7 +1004,7 @@ h2 {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
   h1 {
     font-size: 1.5rem;
     line-height: 35px;
@@ -868,34 +1044,172 @@ h2 {
   }
 }
 
-/* Info Page Styles */
-.scrollable {
-  overflow-y: auto;
+/* Height Media Queries */
+@media (min-height: 1700px) {
+  .shapes {
+    width: 60vh;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .shapes-1 {
+    display: none;
+  }
 }
 
-#info-container {
-  align-content: start;
+@media (max-width: 700px) and (min-width: 481px) {
+  .shapes {
+    width: 20vh;
+    grid-template-columns: 1fr;
+  }
+
+  .shapes-3 {
+    display: none;
+  }
 }
 
-.abstract {
-  top: 345px;
-  left: 140px;
-  width: 684px;
-  height: 456px;
+@media (min-height: 1000px) and (min-width: 480px) and (max-width: 1270px) {
+  .shapes {
+    width: 20vh;
+    grid-template-columns: 1fr;
+  }
+
+  .shapes-2 {
+    display: none;
+  }
+
+  .shapes-3 {
+    display: none;
+  }
 }
 
-#add-message-info {
-  position: fixed;
-  top: 83.33%;
-  left: 7.292%;
+@media (min-height: 1200px) and (min-width: 1271px) and (max-width: 2100) {
+  .shapes {
+    width: 40vh;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .shapes-3 {
+    display: none;
+  }
+
+  .shapes-2 {
+    display: none;
+  }
 }
 
-#button-background-info {
-  position: fixed;
-  top: 83.33%;
-  left: 7.292%;
+/* Info Media Queries */
+
+@media (max-width: 1650px) {
+  #add-message-info {
+    top: 80%;
+  }
+
+  #button-background-info {
+    top: 80%;
+  }
 }
 
-#add-message-info:hover {
-  transform: translateX(0px) translateY(0px);
+@media (max-width: 1400px) {
+  #add-message-info {
+    top: 75%;
+  }
+
+  #button-background-info {
+    top: 75%;
+  }
+}
+
+@media (max-width: 840px) {
+  #add-message-info {
+    top: 80%;
+  }
+
+  #button-background-info {
+    top: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  #add-message-info {
+    top: 65%;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  #button-background-info {
+    top: 65%;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  .abstract {
+    width: 350px;
+  }
+
+  .body-text {
+    width: 350px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 638px) {
+  #add-message-info {
+    top: 60%;
+  }
+
+  #button-background-info {
+    top: 60%;
+  }
+
+  .body-text {
+    height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #small-info-shapes {
+    margin-right: 450px;
+  }
+
+  #info-h1 {
+    font-size: 4rem;
+    width: 472px;
+    height: 172px;
+    line-height: 82.66px;
+    margin-right: 80px;
+    margin-bottom: 17.5px;
+  }
+
+  h2 {
+    font-size: 42.66px;
+    width: 472px;
+    height: 60px;
+  }
+
+  #add-message-info {
+    left: 15%;
+    top: 80%;
+  }
+
+  #button-background-info {
+    left: 15%;
+    top: 80%;
+  }
+
+  .abstract {
+    width: 450px;
+    height: 314.66px;
+    margin-top: 17.5px;
+    margin-left: 40px;
+  }
+
+  .body-text {
+    font-size: 1.5rem;
+    line-height: 42px;
+    width: 70%;
+  }
 }
