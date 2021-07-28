@@ -48,21 +48,21 @@ const ethButton = document.querySelector("#eth-button");
 
 function textCopier() {
   let ethInput = document.createElement("input");
-  ethInput.classList.add("eth-input");
+  ethInput.classList.add("eth-input", "no-box-sizing");
   ethInput.value = "0x78382323828328616712172671271";
   ethButton.appendChild(ethInput); 
   let copyText = document.querySelector(".eth-input");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    document.execCommand("copy");
-    ethButton.removeChild(ethInput);
-
-    tooltip.innerHTML = "Copied!";
-  };
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  ethButton.removeChild(ethInput);
   
-  function tooltipFunc() {
-    tooltip.innerHTML = "Copy to clipboard";
-  };
+  tooltip.innerHTML = "Copied!";
+};
+
+function tooltipFunc() {
+  tooltip.innerHTML = "Copy to clipboard";
+};
 
 ethButton.addEventListener("click", textCopier);
 ethButton.addEventListener("mouseout", tooltipFunc);

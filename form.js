@@ -10,14 +10,16 @@ function showTab(n) {
   if (n == 0) {
     document.querySelector("#prevBtn").style.display = "none";
     document.querySelector("#cancel").style.display = "inline";
+    document.querySelector("#cancel-anchor").style.display = "inline";
   } else {
     document.querySelector("#prevBtn").style.display = "inline";
     document.querySelector("#cancel").style.display = "none";
+    document.querySelector("#cancel-anchor").style.display = "none";
   }
   if (n == (x.length - 1)) {
     document.querySelector("#nextBtn").innerHTML = "Add for €2";
   } else {
-    document.querySelector("#nextBtn").innerHTML = "Next";
+    document.querySelector("#nextBtn").innerHTML = "Continue";
   }
   //... and run a function that will display the correct step indicator:
   fixStepIndicator(n)
@@ -27,6 +29,7 @@ function nextPrev(n) {
   // This function will figure out which tab to display
   let x = document.querySelectorAll(".tab");
   // Exit the function if any field in the current tab is invalid:
+  
   if (n == 1 && !validateForm()) return false;
   // Hide the current tab:
   x[currentTab].style.display = "none";
@@ -52,7 +55,7 @@ function validateForm() {
       if (currentTab === 0) {
         if (y[i].value === "") {
           // add an "invalid" class to the field:
-          y[i].className += " invalid";
+          y[i].classList.add("invalid");
           // and set the current valid status to false
           valid = false;
         }
@@ -61,18 +64,23 @@ function validateForm() {
         const acs= document.querySelector("#ACS");
         const ds = document.querySelector("#DS");
   
+        const charityLabels = document.querySelectorAll(".charity-label");
+
         if (feba.checked === false && acs.checked === false && ds.checked === false) {
           // add an "invalid" class to the field:
-          feba.className += " invalid";
+          for (let i = 0; i < charityLabels.length; i++) {
+            charityLabels[i].classList.add("invalid");
+          }
           // and set the current valid status to false
           valid = false;
         }
       } else {
-        const paymentMethod = document.querySelector("#payment-method");
+        const paymentMethod = document.querySelector(".payment-method");
         
         if (paymentMethod.value === "default") {
+          console.log("COCK")
           // add an "invalid" class to the field:
-          feba.className += " invalid";
+          paymentMethod.classList.add("invalid");
           // and set the current valid status to false
           valid = false;
         }
@@ -80,20 +88,25 @@ function validateForm() {
     }
     // If the valid status is true, mark the step as finished and valid:
     if (valid) {
-      document.querySelectorAll(".step")[currentTab].className += " finish";
+      const formElements = document.querySelectorAll(".form-element");
+      for (let i = 0; i < formElements.length; i++) {
+        formElements[i].classList.remove("invalid");
+      }
     }
     return valid; // return the valid status
   }
 
 
 function fixStepIndicator(n) {
-  // This function removes the "active" class of all steps...
-  let i, x = document.querySelectorAll(".step");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" active", "");
+  // Move circle
+  const circle = document.querySelector("#circle");
+  if (n === 0) {
+    circle.style.transform =  "translateX(0px)";
+  } else if (n === 1) {
+    circle.style.transform =  "translateX(171px)";
+  } else {
+    circle.style.transform =  "translateX(342px)";
   }
-  //... and adds the "active" class on the current step:
-  x[n].className += " active";
 }
 
 

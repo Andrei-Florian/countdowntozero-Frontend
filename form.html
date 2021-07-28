@@ -16,47 +16,59 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="scrollable">
     <div class="container">
-      <div class="content-container">
-        <a href="/home.html" class="nav">countdowntozero.</a>
+      <div class="content-container" id="form-container">
+            <a href="/home.html" class="nav">countdowntozero.</a>
         <form id="regForm" action="/action_page.php">
-          <div id="step-container">
+          <div id="big-step-container">
+            <div id="step-container">
+              <span class="step" id="step-1">1</span>
+              <div class="line"></div>
+              <span class="step" id="step-2">2</span>
+              <div class="line"></div>
+              <span class="step" id="step-3">3</span>
+            </div>
             <span id="circle"></span>
-            <span class="step" id="step-1">1</span>
-            <div class="line"></div>
-            <span class="step" id="step-2">2</span>
-            <div class="line"></div>
-            <span class="step" id="step-3">3</span>
           </div>
           <div class="tab">
-            <h1>Write Message</h1>
-            <p class="body-text">Add your message to the blockchain. Once 1,000,000 messages are added, they will all be revealed!</p>
-            <input placeholder="Username" class="text-field form-element" id="username" name="username">
+            <h1 class="form-h1">Write Message</h1>
+            <p class="body-text form-body-text">Add your message to the blockchain. Once 1,000,000 messages are added, they will all be revealed!</p>
+            <input placeholder="Username" class="text-field form-element" id="username" name="username" maxlength="16">
             <p class="disclaimer">* Add any username, 16 character limit.</p>
-            <input placeholder="Message" class="text-field form-element" id="message" name="message">
+            <textarea placeholder="Message" class="text-field form-element" id="message" name="message" maxlength="64orm"></textarea>
             <p class="disclaimer">* Add a message, 64 character limit.</p>
           </div>
           <div class="tab">
-            <h1>Select Charity</h1>
-            <p class="body-text">Add your message to the blockchain. Once 1,000,000 messages are added, they will all be</p>
+            <h1 class="form-h1">Select Charity</h1>
+            <p class="body-text form-body-text">
+              Add your message to the blockchain. Once 1,000,000 messages are added, they will all be</p>
               <input type="radio" name="charity" id="FEBA" class="form-element">
-              <label class="charity-labels" for="FEBA">European Food Banks Federation
+              <label class="charity-label form-element" for="FEBA">
+                <div class="fake-radio"></div>
+                <img src="/Images/FEBA.svg" class="charity-image" alt="Image of ACS">
+                European Food Banks Federation
                 <p class="charity-text">Each transaction comes with a donation of 10 cents to charity.transaction comes with a donation of 10 cents to</p>
               </label>
               <input type="radio" name="charity" id="ACS" class="form-element">
-              <label class="charity-labels" for="ACS">American Cancer Society
-              <p class="charity-text">Each transaction comes with a donation of 10 cents to charity.transaction comes with a donation of 10 cents to</p>
+              <label class="charity-label form-element" for="ACS">
+                <div class="fake-radio"></div>
+                <img src="/Images/ACS.svg" class="charity-image" alt="Image of DS">
+                American Cancer Society
+                <p class="charity-text">Each transaction comes with a donation of 10 cents to charity.transaction comes with a donation of 10 cents to</p>
               </label>
               <input type="radio" name="charity" id="DS" class="form-element">
-              <label class="charity-labels" for="DS">Daffodil Society
+              <div class="fake-radio"></div>
+              <img src="/Images/DS.svg" class="charity-image" alt="Image of FEBA">
+              <label class="charity-label form-element" for="DS">
+                Daffodil Society
                 <p class="charity-text">Each transaction comes with a donation of 10 cents to charity.transaction comes with a donation of 10 cents to</p>
               </label>
           </div>
           <div class="tab">
-            <h1>Payment</h1>
-            <p class="body-text">Add your message to the blockchain. Once 1,000,000 messages are added, they will all be revealed!</p>
-            <select name="payment-method" id="payment-method" class="form-element">
+            <h1 class="form-h1">Payment</h1>
+            <p class="body-text form-body-text">Add your message to the blockchain. Once 1,000,000 messages are added, they will all be revealed!</p>
+            <select name="payment-method" class="payment-method form-element">
               <option value="default">Choose a Payment Method</option>
               <option value="Apple Pay">Apple Pay</option>
               <option value="Google Pay">Google Pay</option>
@@ -70,14 +82,16 @@
               <p><img src="/Images/lock.svg" alt="Secure Payment">Secure Payment By Apple</p>
             </div>
           </div>
-          <div>
-            <a href="/home.html">
+          <div class="form-button-container">
+            <a href="/home.html" id="cancel-anchor">
             <button type="button" id="cancel">Cancel</button>
             </a>
-            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Back</button>
+            <div class="next-button-container">
+              <button type="button" id="nextBtn" onclick="nextPrev(1)">Continue</button>
+              <button class="button-background" id="nextBtn-background" type="button"></button>
+            </div>
           </div>
-          <!-- Circles which indicates the steps of the form: -->
         </form>
       </div>
 
