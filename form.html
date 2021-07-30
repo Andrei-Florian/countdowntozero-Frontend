@@ -17,7 +17,7 @@
     />
   </head>
   <body class="scrollable">
-    <div class="container">
+    <div class="container" id="large-form-container">
       <div class="content-container" id="form-container">
             <a href="/home.html" class="nav">countdowntozero.</a>
         <form id="regForm" action="/action_page.php">
@@ -45,65 +45,135 @@
               Add your message to the blockchain. Once 1,000,000 messages are added, they will all be</p>
               <input type="radio" name="charity" id="FEBA" class="form-element">
               <label class="charity-label form-element" for="FEBA">
-                <div class="fake-radio"></div>
-                <img src="/Images/FEBA.svg" class="charity-image" alt="Image of ACS">
-                European Food Banks Federation
+                <div class="charity-top">                
+                  <div class="fake-radio"><div class="radio-checked"></div></div>
+                  <img src="/Images/FEBA.svg" class="charity-image" alt="Image of ACS">
+                  <p class="body-text">European Food Banks Federation</p>
+                  <p class="body-text mobile-charity-text">FEBA</p>
+                </div>
                 <p class="charity-text">Each transaction comes with a donation of 10 cents to charity.transaction comes with a donation of 10 cents to</p>
               </label>
               <input type="radio" name="charity" id="ACS" class="form-element">
               <label class="charity-label form-element" for="ACS">
-                <div class="fake-radio"></div>
-                <img src="/Images/ACS.svg" class="charity-image" alt="Image of DS">
-                American Cancer Society
+                <div class="charity-top">
+                  <div class="fake-radio"><div class="radio-checked"></div></div>
+                  <img src="/Images/ACS.svg" class="charity-image" alt="Image of DS">
+                  <p class="body-text">American Cancer Society</p>
+                  <p class="body-text mobile-charity-text">ACS</p>
+                </div>
                 <p class="charity-text">Each transaction comes with a donation of 10 cents to charity.transaction comes with a donation of 10 cents to</p>
               </label>
               <input type="radio" name="charity" id="DS" class="form-element">
-              <div class="fake-radio"></div>
-              <img src="/Images/DS.svg" class="charity-image" alt="Image of FEBA">
               <label class="charity-label form-element" for="DS">
-                Daffodil Society
+                <div class="charity-top">
+                  <div class="fake-radio"><div class="radio-checked"></div></div>
+                  <img src="/Images/DS.svg" class="charity-image" alt="Image of FEBA">
+                  <p class="body-text">Daffodil Society</p> 
+                  <p class="body-text mobile-charity-text">DS</p>
+                </div>
                 <p class="charity-text">Each transaction comes with a donation of 10 cents to charity.transaction comes with a donation of 10 cents to</p>
               </label>
           </div>
+
+          <!-- Payment HTML -->
           <div class="tab">
             <h1 class="form-h1">Payment</h1>
             <p class="body-text form-body-text">Add your message to the blockchain. Once 1,000,000 messages are added, they will all be revealed!</p>
-            <select name="payment-method" class="payment-method form-element">
-              <option value="default">Choose a Payment Method</option>
-              <option value="Apple Pay">Apple Pay</option>
-              <option value="Google Pay">Google Pay</option>
-              <option value="Paypal">Paypal</option>
-              <option value="Coinbase Commerce">Coinbase Commerce</option>
-              <option value="Bitpay">Bitpay</option>
-              <option value="Alipay">Alipay</option>
-            </select>
-            <div>
-              <a href="/info.html">Why do I need to Pay?</a>
-              <p><img src="/Images/lock.svg" alt="Secure Payment">Secure Payment By Apple</p>
+            <input type="radio" name="payment-label" id="apple-pay" class="form-element">
+            <label class="charity-label" id="payment-label" for="apple-pay">
+            <div class="charity-top">
+              <div class="fake-radio">
+               <div class="radio-checked"></div>
+                </div>
+                <img src="/Images/apple-logo.svg" class="apple-image" alt="Image of Apple Logo">
+                <p class="body-text">Apple Pay</p>
             </div>
-          </div>
-          <div class="form-button-container">
-            <a href="/home.html" id="cancel-anchor">
-            <button type="button" id="cancel">Cancel</button>
-            </a>
-            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Back</button>
-            <div class="next-button-container">
-              <button type="button" id="nextBtn" onclick="nextPrev(1)">Continue</button>
-              <button class="button-background" id="nextBtn-background" type="button"></button>
+              </label>
+            <label class="charity-label" id="payment-label" for="apple-pay">
+            <div class="charity-top">
+              <div class="fake-radio">
+               <div class="radio-checked"></div>
+                </div>
+                <img src="/Images/apple-logo.svg" class="apple-image" alt="Image of Apple Logo">
+                <p class="body-text">Apple Pay</p>
             </div>
+              </label>
+            <label class="charity-label" id="payment-label" for="apple-pay">
+            <div class="charity-top">
+              <div class="fake-radio">
+               <div class="radio-checked"></div>
+                </div>
+                <img src="/Images/apple-logo.svg" class="apple-image" alt="Image of Apple Logo">
+                <p class="body-text">Apple Pay</p>
+            </div>
+              </label>
+            <label class="charity-label" id="payment-label" for="apple-pay">
+            <div class="charity-top">
+              <div class="fake-radio">
+               <div class="radio-checked"></div>
+                </div>
+                <img src="/Images/apple-logo.svg" class="apple-image" alt="Image of Apple Logo">
+                <p class="body-text">Apple Pay</p>
+            </div>
+              </label>
+            <label class="charity-label" id="payment-label" for="apple-pay">
+            <div class="charity-top">
+              <div class="fake-radio">
+               <div class="radio-checked"></div>
+                </div>
+                <img src="/Images/apple-logo.svg" class="apple-image" alt="Image of Apple Logo">
+                <p class="body-text">Apple Pay</p>
+            </div>
+              </label>
+            <label class="charity-label" id="payment-label" for="apple-pay">
+            <div class="charity-top">
+              <div class="fake-radio">
+               <div class="radio-checked"></div>
+                </div>
+                <img src="/Images/apple-logo.svg" class="apple-image" alt="Image of Apple Logo">
+                <p class="body-text">Apple Pay</p>
+            </div>
+              </label>
+            <label class="charity-label" id="payment-label" for="apple-pay">
+            <div class="charity-top">
+              <div class="fake-radio">
+               <div class="radio-checked"></div>
+                </div>
+                <img src="/Images/apple-logo.svg" class="apple-image" alt="Image of Apple Logo">
+                <p class="body-text">Apple Pay</p>
+            </div>
+              </label>
+
+              
+              <div id="secure-pay-container">
+                <a href="/info.html">
+                  <img src="/Images/info.svg" class="payment-icon" alt="Information Image">
+                  Why do I need to Pay?</a>
+                <p><img src="/Images/lock.svg" class="payment-icon" alt="Secure Payment">Secure Payment By Apple</p>
+              </div>
+            </div>
+            <div class="form-button-container">
+              <a href="/home.html" id="cancel-anchor">
+                <button type="button" id="cancel">Cancel</button>
+              </a>
+              <button type="button" id="prevBtn" onclick="nextPrev(-1)">Back</button>
+              <div class="next-button-container">
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Continue</button>
+                <button class="button-background" id="nextBtn-background" type="button"></button>
+              </div>
+            </div>
+          </form>
+        </div>
+          
+          <div class="shapes">
+            <div class="shapes-1"></div>
+            <div class="shapes-2"></div>
+            <div class="shapes-3"></div>
+            <div class="shapes-4"></div>
           </div>
-        </form>
-      </div>
+          
+        </div>
 
-      <div class="shapes">
-          <div class="shapes-1"></div>
-          <div class="shapes-2"></div>
-          <div class="shapes-3"></div>
-          <div class="shapes-4"></div>
-      </div>
-
-    </div>
-    
     <script src="form.js"></script>
   </body>
 </html>

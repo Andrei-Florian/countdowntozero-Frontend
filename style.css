@@ -17,7 +17,7 @@ body {
 
 .content-container {
   margin-left: 13%;
-  height: 100vh;
+  height: 100%;
   display: grid;
   align-content: center;
 }
@@ -363,15 +363,16 @@ h2 {
   overflow-y: auto;
 }
 
+#button-container-info {
+  position: relative;
+}
+
 #info-container {
   align-content: start;
 }
 
 .abstract {
-  top: 345px;
-  left: 140px;
-  width: 684px;
-  height: 456px;
+  width: 100%;
 }
 
 #add-message-info {
@@ -390,12 +391,17 @@ h2 {
   transform: translateX(0px) translateY(0px);
 }
 
+.big-div {
+  width: 70%;
+}
+
 /* Form Page Styles */
 * :not(.no-box-sizing) {
   box-sizing: border-box;
 }
 
 .form-h1 {
+  margin-bottom: 26px;
   width: initial;
 }
 
@@ -416,6 +422,10 @@ h2 {
   margin-top: 142px;
 }
 
+.form-body-text {
+  margin: 0px 0px 51px 0px;
+}
+
 .text-field {
   width: 100%;
   height: 80px;
@@ -431,7 +441,7 @@ input {
   padding: 10px 33px;
   font-size: 1rem;
   font-family: poppins, sans-serif;
-  margin-top: 43px;
+  /* margin-top: 43px; */
 }
 
 textarea {
@@ -454,39 +464,21 @@ textarea {
 }
 
 .charity-text {
-  display: none;
-  align-self: flex-end;
+  /* display: none; */
+  position: absolute;
+  left: -500%;
+  /* visibility: hidden; */
+  line-height: 30px;
+  /* background-color: #fff; */
+  margin-top: 0px;
+  opacity: 0;
+  transition: 0.6s opacity;
+  /* align-self: flex-end; */
 }
 
-/* #nextBtn {
-  background-color: #04aa6d;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 17px;
-  font-family: poppins, sans-serif;
-  cursor: pointer;
-} */
-
-/* .button-container {
-  width: 48.1802%;
-  display: grid;
-  grid-template-columns: repeat(27, 1fr);
-  text-decoration: none;
-} */
-/* 
-.button-background {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 16;
-  background-color: #fdd272;
-  width: 277px;
-  height: 108px;
-  border-radius: 500px 500px 500px 0px;
-  border: none;
-  z-index: 0;
-} */
+.mobile-charity-text {
+  display: none;
+}
 
 .form-button-container {
   display: flex;
@@ -501,7 +493,7 @@ textarea {
   width: 48.1802%;
   height: 92px;
   /* padding-left: 20px; */
-  transition: 0.3s justify-items, 0.3s align-items;
+  /* transition: 0.3s justify-items, 0.3s align-items; */
 }
 
 #nextBtn {
@@ -583,28 +575,74 @@ input[type="radio"] {
 .charity-label {
   display: grid;
   grid-template-rows: 1fr;
-  align-items: center;
   border: 3px solid #385663;
   height: 115px;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 27px 10px 27px;
   transition: 0.3s height;
+  border-radius: 18px;
+  background-color: #fff;
+  align-content: center;
+}
+
+.charity-top {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.charity-image {
+  width: 54px;
+  height: 54px;
+  margin-right: 25px;
 }
 
 input[type="radio"]:checked + .charity-label {
-  border-color: lawngreen;
+  /* border-color: lawngreen; */
   height: 192px;
-  grid-template-rows: 95px 1fr;
+  grid-template-rows: 85px 95px;
   /* align-items: start; */
 }
 
 input[type="radio"]:checked + .charity-label .charity-text {
-  display: block;
+  font-size: 1rem;
+  margin-left: 53px;
+  position: static;
+  /* width: 100%;
+  height: 100%; */
+  /* display: block; */
+  opacity: 1;
+  /* background-color: #696969; */
+}
+
+.charity-top .body-text {
+  width: initial;
 }
 
 .fake-radio {
   width: 22px;
   height: 22px;
   border: 2px solid #385663;
+  border-radius: 50%;
+  margin-right: 31px;
+}
+
+.radio-checked {
+  display: none;
+}
+
+input[type="radio"]:checked + .charity-label .fake-radio {
+  /* background-color: #385663; */
+  border: 2px solid #385663;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
+  display: inline;
+  width: 12px;
+  height: 12px;
+  background-color: #385663;
   border-radius: 50%;
 }
 
@@ -674,26 +712,51 @@ input[type="radio"]:checked + .charity-label .charity-text {
   grid-row-end: 2; */
 }
 
-.step.active {
+/* .step.active {
   opacity: 1;
-}
+} */
 
 /* Payment Styles */
 
-.payment-method {
-  -webkit-appearance: none;
-  font-family: poppins, sans-serif;
-  font-size: 24px;
-  text-align-last: center;
-  top: 535px;
-  left: 140px;
-  width: 577px;
-  height: 80px;
+.apple-image {
+  margin-left: 10px;
+  margin-right: 27px;
+}
+
+#payment-label {
   border: 3px solid #385663;
+  height: 80px;
+  width: 270px;
   border-radius: 18px;
-  background-image: url("Images/paymentselector.svg");
-  background-repeat: no-repeat;
-  background-position: 95% 50%;
+  background-color: #fff;
+  transition: 0.3s height;
+}
+
+#secure-pay-container {
+  display: flex;
+  align-items: center;
+  margin-top: 23px;
+}
+
+#secure-pay-container a {
+  display: flex;
+  align-items: center;
+  margin-right: 55px;
+  font-size: 1rem;
+  color: #022539;
+  text-decoration: underline;
+}
+
+#secure-pay-container p {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.payment-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }
 
 .invalid {
@@ -748,8 +811,41 @@ input[type="radio"]:checked + .charity-label .charity-text {
     width: 250px;
   }
 
+  .form-body-text {
+    margin-bottom: 35px;
+  }
+
   .add-message:hover {
     transform: translateX(11px) translateY(10px);
+  }
+
+  #regForm {
+    margin-top: 100px;
+  }
+
+  #big-step-container {
+    margin-bottom: 0px;
+    height: 61px;
+  }
+
+  #step-container {
+    width: 313px;
+    margin: 0 16px;
+  }
+
+  .step {
+    height: 31px;
+    width: 31px;
+  }
+
+  .line {
+    width: 75px;
+    height: 2px;
+  }
+
+  #circle {
+    height: 61px;
+    width: 61px;
   }
 }
 
@@ -824,6 +920,23 @@ input[type="radio"]:checked + .charity-label .charity-text {
   .big-button-container {
     margin-top: 0px;
   }
+
+  #large-form-container {
+    grid-template-columns: 66.25% 33.75%;
+  }
+
+  #form-container {
+    margin-left: 10.5%;
+  }
+
+  input[type="radio"]:checked + .charity-label .charity-text {
+    font-size: 0.8rem;
+    line-height: 25px;
+  }
+
+  input[type="radio"]:checked + .charity-label {
+    height: 182px;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -842,7 +955,6 @@ input[type="radio"]:checked + .charity-label .charity-text {
 
   .body-text {
     font-size: 0.9375rem;
-    height: 200px;
   }
 
   .form-body-text {
@@ -893,6 +1005,55 @@ input[type="radio"]:checked + .charity-label .charity-text {
   .big-button-container {
     margin-top: 0px;
   }
+
+  .text-field {
+    font-size: 0.8rem;
+    height: 60px;
+    border-width: 2px;
+  }
+
+  #message {
+    height: 142px;
+  }
+
+  .next-button-container {
+    height: 72px;
+  }
+
+  #nextBtn {
+    border-width: 3px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  #nextBtn-background {
+    height: 60px;
+  }
+
+  #prevBtn {
+    border-width: 3px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  #cancel {
+    border-width: 3px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  .charity-label {
+    border-width: 2px;
+    /* height: 100px; */
+  }
+
+  input[type="radio"]:checked + .charity-label {
+    height: 172px;
+  }
+
+  input[type="radio"]:checked + .charity-label {
+    grid-template-rows: 85px 85px;
+  }
 }
 
 @media (max-width: 1169px) {
@@ -935,6 +1096,25 @@ input[type="radio"]:checked + .charity-label .charity-text {
 
   .eth-address-hidden {
     display: none;
+  }
+
+  input[type="radio"]:checked + .charity-label {
+    height: 200px;
+  }
+
+  .fake-radio {
+    width: 20px;
+    height: 20px;
+  }
+
+  input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
+    width: 10px;
+    height: 10px;
+  }
+
+  .charity-image {
+    width: 48px;
+    height: 48px;
   }
 }
 
@@ -994,6 +1174,36 @@ input[type="radio"]:checked + .charity-label .charity-text {
   .eth-address-hidden {
     display: none;
   }
+
+  #regForm {
+    margin-top: 83px;
+  }
+
+  #big-step-container {
+    margin-bottom: 0px;
+    height: 46px;
+  }
+
+  #step-container {
+    width: 260px;
+    margin: 0 10px;
+  }
+
+  .step {
+    height: 26px;
+    width: 26px;
+    font-size: 0.8rem;
+  }
+
+  .line {
+    width: 66px;
+    height: 2px;
+  }
+
+  #circle {
+    height: 46px;
+    width: 46px;
+  }
 }
 
 @media (max-width: 936px) {
@@ -1008,6 +1218,40 @@ input[type="radio"]:checked + .charity-label .charity-text {
 
   .shapes-2 {
     display: none;
+  }
+
+  #large-form-container {
+    grid-template-columns: 77.5% 22.5%;
+  }
+
+  #form-container {
+    margin-left: 9%;
+  }
+
+  #big-step-container {
+    margin-bottom: 0px;
+    height: 46px;
+  }
+
+  #step-container {
+    width: 210px;
+    margin: 0 10px;
+  }
+
+  .step {
+    height: 22px;
+    width: 22px;
+    font-size: 0.6rem;
+  }
+
+  .line {
+    width: 53px;
+    height: 2px;
+  }
+
+  #circle {
+    height: 40px;
+    width: 40px;
   }
 }
 
@@ -1059,6 +1303,33 @@ input[type="radio"]:checked + .charity-label .charity-text {
     font-size: 0.8rem;
     border-width: 3px;
   }
+
+  #nextBtn {
+    font-size: 1rem;
+  }
+
+  #prevBtn {
+    font-size: 1rem;
+  }
+
+  #cancel {
+    font-size: 1rem;
+  }
+
+  .charity-top p:nth-of-type(1) {
+    display: none;
+  }
+
+  .mobile-charity-text {
+    display: inline-block;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 750px) {
+  input[type="radio"]:checked + .charity-label {
+    height: 240px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -1093,6 +1364,33 @@ input[type="radio"]:checked + .charity-label .charity-text {
     height: 50.7px;
     font-size: 0.7rem;
     border-width: 2px;
+  }
+
+  input[type="radio"]:checked + .charity-label .charity-text {
+    font-size: 0.7rem;
+    line-height: 25px;
+  }
+
+  .charity-label {
+    height: 90px;
+  }
+
+  input[type="radio"]:checked + .charity-label {
+    height: 200px;
+  }
+  .form-h1 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 684px) {
+  input[type="radio"]:checked + .charity-label {
+    height: 220px;
+  }
+
+  .form-body-text {
+    margin-bottom: 25px;
   }
 }
 
@@ -1142,6 +1440,48 @@ input[type="radio"]:checked + .charity-label .charity-text {
     height: 44.85px;
     font-size: 0.6rem;
     border-width: 2px;
+  }
+
+  .disclaimer {
+    font-size: 0.6rem;
+    margin-bottom: 20px;
+  }
+
+  .next-button-container {
+    height: 67px;
+  }
+
+  #nextBtn {
+    border-width: 3px;
+    height: 55px;
+    font-size: 0.9rem;
+  }
+
+  #nextBtn-background {
+    height: 55px;
+  }
+
+  #prevBtn {
+    border-width: 3px;
+    height: 55px;
+    font-size: 0.9rem;
+  }
+
+  #cancel {
+    border-width: 3px;
+    height: 55px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 560px) {
+  input[type="radio"]:checked + .charity-label .charity-text {
+    font-size: 0.6rem;
+    line-height: 22px;
+  }
+
+  input[type="radio"]:checked + .charity-label {
+    height: 210px;
   }
 }
 
@@ -1237,6 +1577,68 @@ input[type="radio"]:checked + .charity-label .charity-text {
     margin-right: auto;
     margin-left: auto;
   }
+
+  #large-form-container {
+    grid-template-columns: 1fr;
+  }
+
+  #form-container {
+    margin-left: 7.292%;
+  }
+
+  #regForm {
+    width: 100%;
+  }
+
+  .form-button-container {
+    margin-bottom: 10px;
+  }
+
+  #big-step-container {
+    margin-bottom: 0px;
+    height: 61px;
+  }
+
+  #step-container {
+    width: 319px;
+    margin: 0 16px;
+  }
+
+  .step {
+    height: 31px;
+    width: 31px;
+    font-size: 0.8rem;
+  }
+
+  .line {
+    width: 78px;
+    height: 2px;
+  }
+
+  #circle {
+    height: 61px;
+    width: 61px;
+  }
+
+  #nextBtn {
+    border-width: 2px;
+  }
+
+  #prevBtn {
+    border-width: 2px;
+  }
+
+  #cancel {
+    border-width: 2px;
+  }
+
+  .disclaimer {
+    font-size: 0.875rem;
+  }
+
+  .form-body-text {
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -1278,6 +1680,32 @@ input[type="radio"]:checked + .charity-label .charity-text {
   #eth-button {
     font-size: 0.8rem;
   }
+
+  #big-step-container {
+    margin-bottom: 0px;
+    height: 46px;
+  }
+
+  #step-container {
+    width: 260px;
+    margin: 0 10px;
+  }
+
+  .step {
+    height: 26px;
+    width: 26px;
+    font-size: 0.8rem;
+  }
+
+  .line {
+    width: 66px;
+    height: 2px;
+  }
+
+  #circle {
+    height: 46px;
+    width: 46px;
+  }
 }
 
 /* Height Media Queries */
@@ -1301,6 +1729,22 @@ input[type="radio"]:checked + .charity-label .charity-text {
   .shapes-3 {
     display: none;
   }
+
+  #large-form-container {
+    grid-template-rows: 88.75% 11.25%;
+  }
+
+  #nextBtn {
+    border-width: 2px;
+  }
+
+  #cancel {
+    border-width: 2px;
+  }
+
+  #prevBtn {
+    border-width: 2px;
+  }
 }
 
 @media (min-height: 1000px) and (min-width: 480px) and (max-width: 1270px) {
@@ -1315,6 +1759,26 @@ input[type="radio"]:checked + .charity-label .charity-text {
 
   .shapes-3 {
     display: none;
+  }
+
+  .big-div {
+    width: 100%;
+  }
+
+  #large-form-container {
+    grid-template-rows: 88.75% 11.25%;
+  }
+
+  #nextBtn {
+    border-width: 2px;
+  }
+
+  #cancel {
+    border-width: 2px;
+  }
+
+  #prevBtn {
+    border-width: 2px;
   }
 }
 
@@ -1346,6 +1810,12 @@ input[type="radio"]:checked + .charity-label .charity-text {
 
 /* Info Media Queries */
 
+@media (max-width: 1750px) {
+  .nav-div {
+    height: 140px;
+  }
+}
+
 @media (max-width: 1650px) {
   #add-message-info {
     top: 80%;
@@ -1353,6 +1823,10 @@ input[type="radio"]:checked + .charity-label .charity-text {
 
   #button-background-info {
     top: 80%;
+  }
+
+  .nav-div {
+    height: 120px;
   }
 }
 
@@ -1364,42 +1838,43 @@ input[type="radio"]:checked + .charity-label .charity-text {
   #button-background-info {
     top: 75%;
   }
+
+  #info-h1 {
+    line-height: 60px;
+  }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 936px) {
+  .nav-div {
+    height: 100px;
+  }
+
   #add-message-info {
-    top: 80%;
+    top: 60%;
   }
 
   #button-background-info {
-    top: 80%;
+    top: 60%;
+  }
+}
+
+@media (max-width: 840px) {
+  .big-div {
+    width: 120%;
+  }
+
+  .nav-div {
+    height: 95px;
   }
 }
 
 @media (max-width: 700px) {
   #add-message-info {
-    top: 65%;
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    top: 55%;
   }
 
   #button-background-info {
-    top: 65%;
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
-  }
-
-  .abstract {
-    width: 350px;
-  }
-
-  .body-text {
-    width: 350px;
-    height: 100%;
+    top: 55%;
   }
 
   .form-body-text {
@@ -1408,32 +1883,26 @@ input[type="radio"]:checked + .charity-label .charity-text {
 }
 
 @media (max-width: 638px) {
-  #add-message-info {
-    top: 60%;
-  }
-
-  #button-background-info {
-    top: 60%;
-  }
-
-  .body-text {
-    height: 100%;
-  }
-
   .form-body-text {
     height: initial;
+  }
+
+  .nav-div {
+    height: 90px;
+  }
+
+  .big-div {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  #small-info-shapes {
-    margin-right: 450px;
-  }
-
   #info-h1 {
     font-size: 4rem;
-    width: 472px;
-    height: 172px;
     line-height: 82.66px;
     margin-right: 80px;
     margin-bottom: 17.5px;
@@ -1441,38 +1910,43 @@ input[type="radio"]:checked + .charity-label .charity-text {
 
   h2 {
     font-size: 2.666rem;
-    width: 472px;
-    height: 60px;
   }
 
   #add-message-info {
-    left: 15%;
-    top: 70%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #button-background-info {
-    left: 15%;
-    top: 70%;
-  }
-
-  .abstract {
-    width: 45%;
-    height: 45%;
-    margin-right: 150px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .body-text {
     font-size: 1.5rem;
     line-height: 42.66px;
-    width: 65%;
+  }
+
+  .nav-div {
+    height: 104px;
   }
 
   .form-body-text {
     height: initial;
+    font-size: 1.125rem;
+    line-height: 33px;
   }
 }
 
 @media (max-width: 375px) {
+  .nav-div {
+    height: 90px;
+  }
+
   #info-h1 {
     font-size: 3.5rem;
     line-height: 70px;
@@ -1480,23 +1954,5 @@ input[type="radio"]:checked + .charity-label .charity-text {
 
   h2 {
     font-size: 2rem;
-    width: 400px;
-    height: 80px;
-  }
-
-  .body-text {
-    width: 60%;
-  }
-
-  #add-message-info {
-    left: 20%;
-  }
-
-  #button-background-info {
-    left: 20%;
-  }
-
-  .abstract {
-    width: 400px;
   }
 }
