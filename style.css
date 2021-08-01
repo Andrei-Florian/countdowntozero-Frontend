@@ -38,8 +38,8 @@ body {
 .small-shapes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  width: 180px;
-  height: 36px;
+  width: 160px;
+  height: 32px;
 }
 
 .shapes-1 {
@@ -155,7 +155,7 @@ h2 {
   font-family: poppins, sans-serif;
   font-weight: bold;
   color: #022539;
-  font-size: 2rem;
+  font-size: 1.9rem;
   height: 45px;
   margin-left: 36px;
 }
@@ -326,6 +326,7 @@ h2 {
   cursor: pointer;
   align-self: end;
   justify-self: end;
+  transition: transform 0.3s;
 }
 
 .add-message {
@@ -340,12 +341,11 @@ h2 {
   border: 4px solid #385663;
   background-color: rgba(0, 0, 0, 0);
   z-index: 1;
-  transition: transform 0.3s;
   cursor: pointer;
 }
 
-.add-message:hover {
-  transform: translateX(11px) translateY(12px);
+.add-message:hover + .button-background {
+  transform: translateX(-11px) translateY(-12px);
 }
 
 .big-button-container {
@@ -392,7 +392,7 @@ h2 {
 }
 
 .big-div {
-  width: 70%;
+  width: 80%;
 }
 
 /* Form Page Styles */
@@ -491,7 +491,7 @@ textarea {
   position: relative;
   display: grid;
   width: 48.1802%;
-  height: 92px;
+  height: 97px;
   /* padding-left: 20px; */
   /* transition: 0.3s justify-items, 0.3s align-items; */
 }
@@ -501,7 +501,7 @@ textarea {
   font-weight: bold;
   color: #022539;
   font-size: 1.5rem;
-  width: 93.5251%;
+  width: 96%;
   height: 80px;
   border-radius: 18px;
   border: 4px solid #385663;
@@ -513,12 +513,12 @@ textarea {
 
 #nextBtn-background {
   border-radius: 18px;
-  width: 93.5251%;
+  width: 96%;
   height: 80px;
 }
 
-#nextBtn:hover {
-  transform: translateX(6.4743%) translateY(12px);
+#nextBtn:hover + #nextBtn-background {
+  transform: translateX(-4.2%) translateY(-17.5px);
 }
 
 #prevBtn {
@@ -815,8 +815,8 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     margin-bottom: 35px;
   }
 
-  .add-message:hover {
-    transform: translateX(11px) translateY(10px);
+  .add-message:hover + .button-background {
+    transform: translateX(-11px) translateY(-10px);
   }
 
   #regForm {
@@ -908,8 +908,8 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     height: 37px;
   }
 
-  .add-message:hover {
-    transform: translateX(9px) translateY(8px);
+  .add-message:hover + .button-background {
+    transform: translateX(-9px) translateY(-8px);
   }
 
   .small-shapes {
@@ -997,8 +997,8 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     height: 30px;
   }
 
-  .add-message:hover {
-    transform: translateX(9px) translateY(8px);
+  .add-message:hover + .button-background {
+    transform: translateX(-9px) translateY(-8px);
   }
 
   .small-shapes {
@@ -1021,7 +1021,7 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   }
 
   .next-button-container {
-    height: 72px;
+    height: 78px;
   }
 
   #nextBtn {
@@ -1149,8 +1149,8 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     height: 68.25px;
   }
 
-  .add-message:hover {
-    transform: translateX(8px) translateY(7px);
+  .add-message:hover + .button-background {
+    transform: translateX(-8px) translateY(-7px);
   }
 
   .button-background {
@@ -1292,8 +1292,8 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     border-width: 3px;
   }
 
-  .add-message:hover {
-    transform: translateX(7px) translateY(6px);
+  .add-message:hover + .button-background {
+    transform: translateX(-7px) translateY(-6px);
   }
 
   .button-background {
@@ -1520,6 +1520,10 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     padding: 100px 9% 100px 9%;
   }
 
+  #info-container {
+    padding: 100px 9% 100px 9%;
+  }
+
   .messages-remaining-container {
     width: 100%;
   }
@@ -1555,8 +1559,8 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     margin-bottom: 43px;
   }
 
-  .add-message:hover {
-    transform: translateX(11px) translateY(15px);
+  .add-message:hover + .button-background {
+    transform: translateX(-11px) translateY(-15px);
   }
 
   .info-button {
@@ -1689,7 +1693,7 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   }
 
   #regForm {
-    height: 800px;
+    height: 900px;
     margin-top: initial;
   }
 }
@@ -1731,8 +1735,8 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     margin-bottom: 43px;
   }
 
-  .add-message:hover {
-    transform: translateX(9px) translateY(13px);
+  .add-message:hover + .button-background {
+    transform: translateX(-9px) translateY(-13px);
   }
 
   #mobile-info-button {
@@ -1883,6 +1887,10 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     /* justify-content: center; */
   }
 
+  #info-container {
+    padding: 100px 19% 100px 19%;
+  }
+
   #regForm {
     width: 100%;
     margin-top: initial;
@@ -1928,8 +1936,8 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     margin-bottom: 43px;
   }
 
-  .add-message:hover {
-    transform: translateX(11px) translateY(15px);
+  .add-message:hover + .button-background {
+    transform: translateX(-11px) translateY(-15px);
   }
 
   .info-button {
@@ -1987,6 +1995,18 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   .text-field {
     font-size: 1rem;
   }
+
+  #add-message-info {
+    left: 19%;
+  }
+
+  #button-background-info {
+    left: 19%;
+  }
+
+  .nav-div {
+    height: 50px;
+  }
 }
 
 @media (max-width: 870px) and (min-width: 701px) and (min-height: 680px) {
@@ -2026,6 +2046,10 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
 
   #large-form-container #form-container {
     margin: initial;
+    padding: 100px 19% 100px 19%;
+  }
+
+  #info-container {
     padding: 100px 19% 100px 19%;
   }
 
@@ -2074,8 +2098,8 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     margin-bottom: 43px;
   }
 
-  .add-message:hover {
-    transform: translateX(11px) translateY(15px);
+  .add-message:hover + .button-background {
+    transform: translateX(-11px) translateY(-15px);
   }
 
   .info-button {
@@ -2134,6 +2158,18 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   .text-field {
     font-size: 1rem;
   }
+
+  #add-message-info {
+    left: 19%;
+  }
+
+  #button-background-info {
+    left: 19%;
+  }
+
+  .nav-div {
+    height: 50px;
+  }
 }
 
 @media (max-width: 971px) and (min-height: 680px) and (min-width: 701px) {
@@ -2160,7 +2196,7 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   }
 }
 
-@media (min-height: 890px) and (min-width: 701px) and (max-width: 1270px) {
+@media (min-height: 890px) and (min-width: 701px) and (max-width: 1300px) {
   .shapes {
     display: none;
   }
@@ -2199,6 +2235,10 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     margin-left: initial;
     padding: 100px 19% 100px 19%;
     /* justify-content: center; */
+  }
+
+  #info-container {
+    padding: 100px 19% 100px 19%;
   }
 
   #regForm {
@@ -2246,8 +2286,8 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     margin-bottom: 43px;
   }
 
-  .add-message:hover {
-    transform: translateX(11px) translateY(15px);
+  .add-message:hover + .button-background {
+    transform: translateX(-11px) translateY(-15px);
   }
 
   .info-button {
@@ -2305,6 +2345,18 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   .text-field {
     font-size: 1rem;
   }
+
+  #add-message-info {
+    left: 19%;
+  }
+
+  #button-background-info {
+    left: 19%;
+  }
+
+  .nav-div {
+    height: 50px;
+  }
 }
 
 @media (min-height: 1200px) and (min-width: 1271px) and (max-width: 2100) {
@@ -2350,7 +2402,7 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
 
 @media (min-width: 701px) and (max-width: 1270px) and (min-height: 1160px) {
   #regForm {
-    height: 800px;
+    height: 900px;
     margin-top: initial;
   }
 
@@ -2371,6 +2423,16 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
 
   .shapes-1 {
     display: none;
+  }
+
+  #messages-remaining {
+    font-size: 2.1rem;
+    height: 55px;
+  }
+
+  .small-shapes {
+    width: 200px;
+    height: 40px;
   }
 }
 
@@ -2430,20 +2492,28 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   }
 }
 
-@media (min-height: 1310px) and (min-width: 1900px) and (max-width: 2000px) {
+/* @media (min-height: 1310px) and (min-width: 1700px) and (max-width: 2000px) {
   .shapes {
-    width: 60vh;
-    grid-template-columns: 1fr 1fr 1fr;
+    width: 40vh;
+    grid-template-columns: 1fr 1fr;
   }
 
   .shapes-1 {
     display: none;
   }
-}
+
+  .shapes-2 {
+    display: none;
+  }
+} */
 
 @media (min-width: 2700px) {
   #form-container {
     width: 1292px;
+  }
+
+  #home-container {
+    width: 1385px;
   }
 }
 
@@ -2483,6 +2553,10 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
 
   #large-form-container #form-container {
     margin-left: initial;
+    padding: 100px 19% 100px 19%;
+  }
+
+  #info-container {
     padding: 100px 19% 100px 19%;
   }
 
@@ -2535,8 +2609,8 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     margin-bottom: 43px;
   }
 
-  .add-message:hover {
-    transform: translateX(11px) translateY(15px);
+  .add-message:hover + .button-background {
+    transform: translateX(-11px) translateY(-15px);
   }
 
   .info-button {
@@ -2594,12 +2668,401 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   .text-field {
     font-size: 1rem;
   }
+
+  #add-message-info {
+    left: 19%;
+  }
+
+  #button-background-info {
+    left: 19%;
+  }
+
+  .nav-div {
+    height: 50px;
+  }
+}
+
+@media (min-width: 1700px) and (max-width: 2500px) and (min-height: 1446px) and (max-height: 3000px) {
+  .shapes {
+    width: 40vh;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .shapes-1 {
+    display: none;
+  }
+
+  .shapes-2 {
+    display: none;
+  }
+}
+
+/* .shapes {
+    display: none;
+  }
+
+  .big-div {
+    width: 100%;
+  }
+
+  .container {
+    grid-template-columns: 100%;
+  }
+
+  .scrollable #large-form-container {
+    grid-template-columns: 100%;
+  }
+
+  #nextBtn {
+    border-width: 2px;
+  }
+
+  #cancel {
+    border-width: 2px;
+  }
+
+  #prevBtn {
+    border-width: 2px;
+  }
+
+  .content-container {
+    margin-left: initial;
+    padding: 100px 33% 150px 33%;
+  }
+
+  #large-form-container #form-container {
+    margin-left: initial;
+    padding: 100px 19% 100px 19%;
+  }
+
+  #info-container {
+    padding: 100px 19% 100px 19%;
+  }
+
+  #regForm {
+    width: 100%;
+    margin-top: initial;
+    height: 900px;
+  }
+
+  .nav {
+    left: 19.5%;
+  }
+
+  .content-container {
+    justify-content: center;
+  }
+
+  .messages-remaining-container {
+    width: 100%;
+    height: initial;
+  }
+
+  #messages-remaining {
+    margin-left: 3vw;
+    font-size: 1.9rem;
+    height: 45px;
+  }
+
+  h1 {
+    width: 100%;
+    font-size: 4rem;
+    line-height: 90px;
+    margin-top: 34px;
+    margin-bottom: 52px;
+  }
+
+  .big-button-container {
+    width: 100%;
+  }
+
+  .button-container {
+    width: 288px;
+    height: 123px;
+  }
+
+  .add-message {
+    font-size: 1.5rem;
+    width: 277px;
+    height: 108px;
+    margin-bottom: 43px;
+  }
+
+  .add-message:hover + .button-background {
+    transform: translateX(-11px) translateY(-15px);
+  }
+
+  .info-button {
+    width: 277px;
+    height: 108px;
+    font-size: 1.5rem;
+  }
+
+  .button-background {
+    width: 277px;
+    height: 108px;
+  }
+
+  #mobile-shape {
+    display: initial;
+    position: absolute;
+    width: 220px;
+    top: 70%;
+    right: 0;
+  }
+
+  #eth-button {
+    width: 100vw;
+    justify-content: center;
+    font-size: 1rem;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .form-body-text {
+    font-size: 1.5rem;
+    line-height: 40px;
+  }
+
+  .charity-label {
+    height: 110px;
+  }
+
+  input[type="radio"]:checked + .charity-label {
+    height: 190px;
+  }
+
+  input[type="radio"]:checked + .charity-label .charity-text {
+    font-size: 1.1rem;
+    line-height: 30px;
+  }
+
+  .charity-top p {
+    font-size: 1.5rem;
+  }
+
+  .text-field {
+    font-size: 1rem;
+  }
+
+  #add-message-info {
+    left: 19%;
+  }
+
+  #button-background-info {
+    left: 19%;
+  }
+
+  .nav-div {
+    height: 50px;
+  } */
+/* } */
+
+@media (min-width: 1301px) and (max-width: 1930px) and (min-height: 1446px) and (max-height: 3000px) {
+  /* .shapes {
+    display: none;
+  } */
+
+  .big-div {
+    width: 100%;
+  }
+
+  .container {
+    grid-template-columns: 55% 45%;
+  }
+
+  .scrollable #large-form-container {
+    grid-template-columns: 100%;
+  }
+
+  #nextBtn {
+    border-width: 2px;
+  }
+
+  #cancel {
+    border-width: 2px;
+  }
+
+  #prevBtn {
+    border-width: 2px;
+  }
+
+  .content-container {
+    margin-left: 13%;
+    justify-content: center;
+    /* padding: 100px 33% 150px 33%; */
+  }
+
+  #large-form-container #form-container {
+    margin-left: initial;
+    padding: 100px 19% 100px 19%;
+  }
+
+  #info-container {
+    padding: 100px 19% 100px 19%;
+  }
+
+  #regForm {
+    width: 100%;
+    margin-top: initial;
+    height: 900px;
+  }
+
+  .nav {
+    left: 7.29%;
+  }
+
+  .messages-remaining-container {
+    width: 100%;
+    height: initial;
+  }
+
+  #messages-remaining {
+    margin-left: 3vw;
+    font-size: 1.5rem;
+    height: 30px;
+  }
+
+  h1 {
+    width: 100%;
+    font-size: 3.4rem;
+    line-height: 75px;
+    margin-top: 20px;
+  }
+
+  .big-button-container {
+    width: 100%;
+  }
+
+  .button-container {
+    width: 278px;
+    height: 115px;
+  }
+
+  .add-message {
+    font-size: 1.3rem;
+    width: 267px;
+    height: 100px;
+    margin-bottom: 43px;
+  }
+
+  .add-message:hover + .button-background {
+    transform: translateX(-11px) translateY(-15px);
+  }
+
+  .info-button {
+    width: 267px;
+    height: 100px;
+    font-size: 1.3rem;
+    margin-left: 0px;
+  }
+
+  .info-anchor {
+    margin-left: 30px;
+  }
+
+  .button-background {
+    width: 267px;
+    height: 100px;
+  }
+
+  #mobile-shape {
+    display: none;
+  }
+
+  #eth-button {
+    width: 100vw;
+    justify-content: start;
+    font-size: 1rem;
+    left: 7.29%;
+  }
+
+  .form-body-text {
+    font-size: 1.5rem;
+    line-height: 40px;
+  }
+
+  .charity-label {
+    height: 110px;
+  }
+
+  input[type="radio"]:checked + .charity-label {
+    height: 190px;
+  }
+
+  input[type="radio"]:checked + .charity-label .charity-text {
+    font-size: 1.1rem;
+    line-height: 30px;
+  }
+
+  .charity-top p {
+    font-size: 1.5rem;
+  }
+
+  .text-field {
+    font-size: 1rem;
+  }
+
+  #add-message-info {
+    left: 19%;
+  }
+
+  #button-background-info {
+    left: 19%;
+  }
+
+  .nav-div {
+    height: 50px;
+  }
+}
+
+@media (min-width: 1171px) and (max-width: 1450px) {
+  .shapes {
+    width: 20vh;
+    grid-template-columns: 1fr;
+  }
+
+  .shapes-1 {
+    display: none;
+  }
+
+  .shapes-2 {
+    display: none;
+  }
+
+  .shapes-3 {
+    display: none;
+  }
+}
+
+@media (min-height: 1450px) {
+  #eth-button {
+    top: 94%;
+  }
 }
 
 /* Info Media Queries */
+@media (max-width: 2018px) {
+  #info-h1 {
+    font-size: 3.4rem;
+    line-height: 60px;
+  }
+
+  .nav-div {
+    height: 150px;
+  }
+}
+
 @media (max-width: 1750px) {
   .nav-div {
-    height: 140px;
+    height: 150px;
+  }
+
+  #info-h1 {
+    font-size: 3.2rem;
+    line-height: 60px;
   }
 }
 
@@ -2613,20 +3076,33 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   }
 
   .nav-div {
-    height: 120px;
+    height: 140px;
+  }
+
+  #info-h1 {
+    font-size: 3rem;
+    line-height: 60px;
   }
 }
 
-@media (max-width: 1400px) {
-  #add-message-info {
+@media (max-width: 1514px) {
+  #info-h1 {
+    font-size: 2.8rem;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 1410px) {
+  /* #add-message-info {
     top: 75%;
   }
 
   #button-background-info {
     top: 75%;
-  }
+  } */
 
   #info-h1 {
+    font-size: 2.6rem;
     line-height: 60px;
   }
 }
@@ -2636,18 +3112,18 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     height: 100px;
   }
 
-  #add-message-info {
-    top: 60%;
+  /* #add-message-info { */
+  /* top: 60%;
   }
 
   #button-background-info {
     top: 60%;
-  }
+  } */
 }
 
 @media (max-width: 840px) {
   .big-div {
-    width: 120%;
+    width: 100%;
   }
 
   .nav-div {
@@ -2656,38 +3132,18 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
 }
 
 @media (max-width: 700px) {
-  #add-message-info {
+  /* #add-message-info {
     top: 55%;
   }
 
   #button-background-info {
     top: 55%;
-  }
+  } */
 
   .form-body-text {
     height: initial;
   }
-}
 
-@media (max-width: 638px) {
-  .form-body-text {
-    height: initial;
-  }
-
-  .nav-div {
-    height: 90px;
-  }
-
-  .big-div {
-    width: 100%;
-  }
-
-  h2 {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
   #info-h1 {
     font-size: 4rem;
     line-height: 82.66px;
@@ -2728,6 +3184,28 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     line-height: 33px;
   }
 }
+
+@media (max-width: 638px) {
+  .form-body-text {
+    height: initial;
+  }
+
+  .nav-div {
+    height: 90px;
+  }
+
+  .big-div {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+/* @media (max-width: 480px) {
+  
+} */
 
 @media (max-width: 375px) {
   .nav-div {
