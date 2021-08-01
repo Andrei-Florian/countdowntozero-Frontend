@@ -100,9 +100,7 @@ function validateForm() {
 function fixStepIndicator(n) {
   // Move circle
   const media375 = window.matchMedia("(min-width: 375px)");
-  const media480 = window.matchMedia("(min-width: 480px)");
-  const media936 = window.matchMedia("(min-width: 936px)");
-  const media1122 = window.matchMedia("(min-width: 1122px)");
+  const media700 = window.matchMedia("(min-width: 700px)");
   const media1750 = window.matchMedia("(min-width: 1750px)");
   const circle = document.querySelector("#circle");
 
@@ -114,29 +112,13 @@ function fixStepIndicator(n) {
     } else {
       circle.style.transform =  "translateX(342px)";
     }
-  } else if (media1122.matches) {
+  } else if (media700.matches) {
     if (n === 0) {
       circle.style.transform =  "translateX(0px)";
     } else if (n === 1) {
       circle.style.transform =  "translateX(135px)";
     } else {
       circle.style.transform =  "translateX(270px)";
-    }
-  } else if (media936.matches) {
-    if (n === 0) {
-      circle.style.transform =  "translateX(0px)";
-    } else if (n === 1) {
-      circle.style.transform =  "translateX(112px)";
-    } else {
-      circle.style.transform =  "translateX(224px)";
-    }
-  } else if (media480.matches){
-    if (n === 0) {
-      circle.style.transform =  "translateX(0px)";
-    } else if (n === 1) {
-      circle.style.transform =  "translateX(91px)";
-    } else {
-      circle.style.transform =  "translateX(182px)";
     }
   } else if (media375.matches){
     if (n === 0) {
