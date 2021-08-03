@@ -25,18 +25,4 @@ function addShapes() {
       row++;
       }
 };
-
-function addSmallShapes() {
-    for (color of colorOrderValue) {
-        const newShape = document.createElement("div");
-        const smallShapes = document.querySelector(".small-shapes");
-
-        randomRotation();
-  
-        newShape.classList.add("base-shape", color, rotation);
-        smallShapes.appendChild(newShape);
-      }
-};
-
 addShapes(4);
-addSmallShapes();
