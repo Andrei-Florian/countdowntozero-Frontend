@@ -22,14 +22,14 @@ body {
   align-content: center;
 }
 
-.shapes {
+/* .shapes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 80vh;
   height: 100vh;
   position: fixed;
   right: 0;
-}
+} */
 
 .nav-div {
   height: 160px;
@@ -42,7 +42,7 @@ body {
   height: 32px;
 }
 
-.shapes-1 {
+/* .shapes-1 {
   display: grid;
   grid-template-rows: repeat(5 1fr);
 }
@@ -60,7 +60,7 @@ body {
 .shapes-4 {
   display: grid;
   grid-template-rows: repeat(5 1fr);
-}
+} */
 
 .base-shape {
   width: 100%;
@@ -855,12 +855,12 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   }
 }
 
-@media (max-width: 1670px) and (max-height: 710px) {
+/* @media (max-width: 1670px) and (max-height: 710px) {
   .shapes {
     width: 60vh;
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
+} */
 
 @media (max-width: 1670px) {
   /* .shapes {
@@ -868,9 +868,9 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     grid-template-columns: 1fr 1fr 1fr;
   } */
 
-  .shapes-1 {
+  /* .shapes-1 {
     display: none;
-  }
+  } */
 
   .nav {
     font-size: 1.5rem;
@@ -1498,9 +1498,9 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
 } */
 
 @media (max-width: 700px) {
-  .shapes {
+  /* .shapes {
     display: none;
-  }
+  } */
 
   .nav {
     font-size: 1.25rem;
@@ -1852,9 +1852,9 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
 } */
 
 @media (max-width: 869px) and (min-width: 701px) and (min-height: 800px) {
-  .shapes {
+  /* .shapes {
     display: none;
-  }
+  } */
 
   .container {
     grid-template-columns: 100%;
@@ -2015,9 +2015,9 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
 }
 
 @media (max-width: 870px) and (min-width: 701px) and (min-height: 680px) {
-  .shapes {
+  /* .shapes {
     display: none;
-  }
+  } */
 
   .big-div {
     width: 100%;
@@ -2202,9 +2202,9 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
 }
 
 @media (min-height: 890px) and (min-width: 701px) and (max-width: 1000px) {
-  .shapes {
+  /* .shapes {
     display: none;
-  }
+  } */
 
   .big-div {
     width: 100%;
@@ -2364,7 +2364,7 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   }
 }
 
-@media (min-height: 1200px) and (min-width: 1271px) and (max-width: 2100) {
+/* @media (min-height: 1200px) and (min-width: 1271px) and (max-width: 2100) {
   .shapes {
     width: 40vh;
     grid-template-columns: 1fr 1fr;
@@ -2381,7 +2381,7 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   #regForm {
     width: 80%;
   }
-}
+} */
 /* 
 @media (min-height: 1160px) and (max-width: 1270px) {
   #form-container {
@@ -2424,7 +2424,7 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   } */
 }
 
-@media (min-width: 1951px) and (min-height: 1251px) and (max-height: 1440px) {
+/* @media (min-width: 1951px) and (min-height: 1251px) and (max-height: 1440px) {
   .shapes {
     width: 60vh;
     grid-template-columns: 1fr 1fr 1fr;
@@ -2443,9 +2443,9 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     width: 200px;
     height: 40px;
   }
-}
+} */
 
-@media (min-height: 1691px) and (min-width: 1470px) and (max-height: 1985px) {
+/* @media (min-height: 1691px) and (min-width: 1470px) and (max-height: 1985px) {
   .shapes {
     width: 40vh;
     grid-template-columns: 1fr 1fr;
@@ -2458,7 +2458,7 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   .shapes-2 {
     display: none;
   }
-}
+} */
 
 /* @media (min-width: 1101px) and (max-width: 1900px) and (min-height: 1000px) {
   .shapes {
@@ -2470,7 +2470,7 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
     display: none;
   }
 } */
-
+/* 
 @media (min-width: 1001px) and (max-width: 1450px) and (max-height: 1250px) and (min-height: 881px) {
   .shapes {
     width: 40vh;
@@ -2484,9 +2484,9 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   .shapes-2 {
     display: none;
   }
-}
+} */
 
-@media (min-width: 1101px) and (max-width: 1450px) and (min-height: 1251px) and (max-height: 1449px) {
+/* @media (min-width: 1101px) and (max-width: 1450px) and (min-height: 1251px) and (max-height: 1449px) {
   .shapes {
     width: 20vh;
     grid-template-columns: 1fr;
@@ -2503,10 +2503,10 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   .shapes-3 {
     display: none;
   }
-}
+} */
 
 /* NEW MEDIA */
-@media (min-width: 701px) and (max-width: 1101px) and (max-height: 1446px) and (min-height: 961px) {
+/* @media (min-width: 701px) and (max-width: 1101px) and (max-height: 1446px) and (min-height: 961px) {
   .shapes {
     width: 20vh;
     grid-template-columns: 1fr;
@@ -2527,9 +2527,9 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   #regForm {
     width: 80%;
   }
-}
+} */
 
-@media (min-width: 701px) and (max-width: 901px) and (max-height: 960px) {
+/* @media (min-width: 701px) and (max-width: 901px) and (max-height: 960px) {
   .shapes {
     width: 40vh;
     grid-template-columns: 1fr 1fr;
@@ -2546,9 +2546,9 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   #regForm {
     width: 80%;
   }
-}
+} */
 
-@media (min-width: 701px) and (max-width: 1101px) and (min-height: 881px) and (max-height: 960px) {
+/* @media (min-width: 701px) and (max-width: 1101px) and (min-height: 881px) and (max-height: 960px) {
   .shapes {
     width: 40vh;
     grid-template-columns: 1fr 1fr;
@@ -2565,9 +2565,9 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   #regForm {
     width: 80%;
   }
-}
+} */
 
-@media (min-height: 1447px) and (min-width: 1000px) and (max-width: 1449px) and (max-height: 1985px) {
+/* @media (min-height: 1447px) and (min-width: 1000px) and (max-width: 1449px) and (max-height: 1985px) {
   .shapes {
     width: 20vh;
     grid-template-columns: 1fr;
@@ -2588,9 +2588,9 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   #regForm {
     width: 80%;
   }
-}
+} */
 
-@media (min-width: 1951px) and (min-height: 1251px) and (max-height: 1620px) and (max-width: 2900px) {
+/* @media (min-width: 1951px) and (min-height: 1251px) and (max-height: 1620px) and (max-width: 2900px) {
   .shapes {
     width: 60vh;
     grid-template-columns: 1fr 1fr 1fr;
@@ -2599,10 +2599,10 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   .shapes-1 {
     display: none;
   }
-}
+} */
 /* NEW MEDIA */
 
-@media (max-width: 938px) and (min-height: 704px) and (min-width: 701px) {
+/* @media (max-width: 938px) and (min-height: 704px) and (min-width: 701px) {
   .shapes {
     width: 40vh;
     grid-template-columns: 1fr 1fr;
@@ -2667,7 +2667,7 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   .shapes-2 {
     display: none;
   }
-}
+} */
 
 /* @media (min-height: 1310px) and (min-width: 1700px) and (max-width: 2000px) {
   .shapes {
@@ -2695,9 +2695,9 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
 }
 
 @media (max-height: 1445px) and (max-width: 1000px) and (min-width: 701px) and (min-height: 680px) {
-  .shapes {
+  /* .shapes {
     display: none;
-  }
+  } */
 
   .big-div {
     width: 100%;
@@ -2859,7 +2859,7 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   }
 }
 
-@media (min-width: 1481px) and (max-width: 1860px) and (min-height: 1446px) and (max-height: 2350px) {
+/* @media (min-width: 1481px) and (max-width: 1860px) and (min-height: 1446px) and (max-height: 2350px) {
   .shapes {
     width: 40vh;
     grid-template-columns: 1fr 1fr;
@@ -2872,7 +2872,7 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   .shapes-2 {
     display: none;
   }
-}
+} */
 
 /* .shapes {
     display: none;
@@ -3214,7 +3214,7 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   }
 } */
 
-@media (min-width: 1101px) and (max-width: 1480px) and (min-height: 1450px) and (max-height: 1650px) {
+/* @media (min-width: 1101px) and (max-width: 1480px) and (min-height: 1450px) and (max-height: 1650px) {
   .shapes {
     width: 20vh;
     grid-template-columns: 1fr;
@@ -3235,7 +3235,7 @@ input[type="radio"]:checked + .charity-label .fake-radio .radio-checked {
   #regForm {
     width: 80%;
   }
-}
+} */
 
 /* @media (min-width: 1101px) and (max-width: 1800px) and (min-height: 1450px) {
   .shapes {
