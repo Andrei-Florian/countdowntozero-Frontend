@@ -1,71 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>countdowntozero Homepage</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <div class="content-container" id="home-container">
-        
-        <a href="/home.html" class="nav">countdowntozero.</a>
-          <div class="messages-remaining-container">
-            <div class="small-shapes"></div>
-            <p id="messages-remaining">1,000,000 Messsages Left</p>
-          </div>
-  
-          <h1>1,000,000 Messages Encapsulated on the Blockchain.</h1>
-  
-          <div class="big-button-container">
-            <a class="button-container" href="/form.html">
-              <button class="add-message">Add Message</button>
-              <button class="button-background"></button>
-            </a>
-            <a class="info-anchor" href="/info.html" >
-              <button class="info-button">More Info</button>
-            </a>
-          </div>
-          <a href="/info.html" id="mobile-info-button">
-            More Info
-          </a>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>countdowntozero Homepage</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="content-container" id="home-container">
+				<a href="/home.html" class="nav">countdowntozero.</a>
+				<div class="messages-remaining-container">
+					<div class="small-shapes"></div>
+					<p id="messages-remaining">1,000,000 Messsages Left</p>
+				</div>
 
-          <img src="/Images/Group 322.svg" alt="Shape" id="mobile-shape">
+				<h1>1,000,000 Messages Encapsulated on the Blockchain.</h1>
 
-            <div class="tooltip no-box-sizing">
-                <button id="eth-button" class="no-box-sizing">
-                    <span class="tooltiptext no-box-sizing" id="myTooltip">Copy to clipboard</span>
-                        <img src="/Images/clipboard.svg" alt="Ethereum Contract" id="copy-icon"/>
-                        <span id="ethereum-text">
-                          <span class="eth-address-mobile">Copy </span>Ethereum Contract Address<span class="eth-address-hidden">: 0x78382323828328616712172671271</span>
-                        </span>
-                </button>
-            </div>
-      </div>
-          
-          <div class="shapes">
-            <div class="shapes-1"></div>
-            <div class="shapes-2"></div>
-            <div class="shapes-3"></div>
-            <div class="shapes-4"></div>
-          </div>
+				<div class="big-button-container">
+					<a class="button-container" href="/form.html">
+						<button class="add-message">Add Message</button>
+						<button class="button-background"></button>
+					</a>
+					<a class="info-anchor" href="/info.html">
+						<button class="info-button">More Info</button>
+					</a>
+				</div>
+				<a href="/info.html" id="mobile-info-button"> More Info </a>
 
-    </div>
-    
-    <script src="home.js"></script>
-  </body>
+				<img
+					src="/Images/Group 322.svg"
+					alt="Shape"
+					id="mobile-shape"
+				/>
+
+				<div class="tooltip no-box-sizing">
+					<button id="eth-button" class="no-box-sizing">
+						<span class="tooltiptext no-box-sizing" id="myTooltip"
+							>Copy to clipboard</span
+						>
+						<img
+							src="/Images/clipboard.svg"
+							alt="Ethereum Contract"
+							id="copy-icon"
+						/>
+						<span id="ethereum-text">
+							<span class="eth-address-mobile">Copy </span
+							>Ethereum Contract Address<span
+								class="eth-address-hidden"
+								>: 0x78382323828328616712172671271</span
+							>
+						</span>
+					</button>
+				</div>
+			</div>
+			<div class="shapes">
+				<div class="grid-container">
+					<div class="shapes-1"></div>
+					<div class="shapes-2"></div>
+					<div class="shapes-3"></div>
+					<div class="shapes-4"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="home.js"></script>
+	</body>
 </html>
